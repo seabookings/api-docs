@@ -3,8 +3,6 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
   - javascript
 
 toc_footers:
@@ -19,221 +17,1010 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the SeaBookings API!
+You can use our API to access SeaBookings public data, which can get you information on tour activities.
+At the moment we provide facilities to:
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+* Explore tour activities
+* See the details of tour activities
+* Search for a tour activity
 
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+In the near future you will be able to create reservations, and make payments.
 
 # Authentication
 
-> To authorize, use this code:
+> To authorize, we currently use a JWT strategy.
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: Bearer my_own_token"
 ```
 
 ```javascript
-const kittn = require('kittn');
+// make the request to the login endpoint
 
-let api = kittn.authorize('meowmeowmeow');
+function getToken() {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", "/api/v1/auth/anonymous/token", false ); // false for synchronous request
+  xmlHttp.send( null );
+  return JSON.parse(xmlHttp.responseText).token;
+}
+
+var token = getToken();
+var xhr = new XMLHttpRequest();
+var xhr.setRequestHeader("Authorization", "Bearer " + token);
+
+// Then select an api endpoint and send the request
+
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `my_own_token` with your JSON Web Token.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+SeaBookings uses JWT to allow access to the API. You can get an anonymous token by making a request to `/api/v1/auth/anonymous/token`
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+SeaBookings expects for the JWT key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: Bearer my_own_token`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>my_own_token</code> with your personal JWT.
 </aside>
 
-# Kittens
+# Activities
 
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+## Search
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl "http://www.seabookings.com/api/v1/activities/search?query=Kayak"
+  -H "Authorization: Bearer my_own_token"
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/activities/search?query=Kayak", false ); // false for synchronous request
+xmlHttp.send( null );
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+{
+  "data": [{
+    "id": "1",
+    "type": "activity",
+    "attributes": {
+      "id": 1,
+      "name": "Kayak tour 0",
+      "description": "<div>A nice kayak tour through Benagil 0</div>",
+      "time_zone": "Lisbon",
+      "booking_strategy": "instant",
+      "slug": "1-kayak-tour-0",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": "37.0887105",
+          "lng": "-8.4311101"
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": [{
+          "id": "11",
+          "type": "tag"
+        }]
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/1-kayak-tour-0"
+    }
+  }, {
+    "id": "2",
+    "type": "activity",
+    "attributes": {
+      "id": 2,
+      "name": "Kayak tour 1",
+      "description": "A nice kayak tour through Benagil 1",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "2-kayak-tour-1",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/2.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/2.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/2.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/2-kayak-tour-1"
+    }
+  }, {
+    "id": "3",
+    "type": "activity",
+    "attributes": {
+      "id": 3,
+      "name": "Kayak tour 2",
+      "description": "A nice kayak tour through Benagil 2",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "3-kayak-tour-2",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/3.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/3.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/3.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/3-kayak-tour-2"
+    }
+  }, {
+    "id": "4",
+    "type": "activity",
+    "attributes": {
+      "id": 4,
+      "name": "Kayak tour 3",
+      "description": "A nice kayak tour through Benagil 3",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "4-kayak-tour-3",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/4.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/4.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/4.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/4-kayak-tour-3"
+    }
+  }, {
+    "id": "5",
+    "type": "activity",
+    "attributes": {
+      "id": 5,
+      "name": "Kayak tour 4",
+      "description": "A nice kayak tour through Benagil 4",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "5-kayak-tour-4",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/5.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/5.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/5.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/5-kayak-tour-4"
+    }
+  }, {
+    "id": "6",
+    "type": "activity",
+    "attributes": {
+      "id": 6,
+      "name": "Kayak tour 5",
+      "description": "A nice kayak tour through Benagil 5",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "6-kayak-tour-5",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/6.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/6.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/6.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/6-kayak-tour-5"
+    }
+  }, {
+    "id": "7",
+    "type": "activity",
+    "attributes": {
+      "id": 7,
+      "name": "Kayak tour 6",
+      "description": "A nice kayak tour through Benagil 6",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "7-kayak-tour-6",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/7.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/7.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/7.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/7-kayak-tour-6"
+    }
+  }, {
+    "id": "8",
+    "type": "activity",
+    "attributes": {
+      "id": 8,
+      "name": "Kayak tour 7",
+      "description": "A nice kayak tour through Benagil 7",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "8-kayak-tour-7",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/8.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/8.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/8.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/8-kayak-tour-7"
+    }
+  }, {
+    "id": "9",
+    "type": "activity",
+    "attributes": {
+      "id": 9,
+      "name": "Kayak tour 8",
+      "description": "A nice kayak tour through Benagil 8",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "9-kayak-tour-8",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/9.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/9.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/9.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/9-kayak-tour-8"
+    }
+  }, {
+    "id": "10",
+    "type": "activity",
+    "attributes": {
+      "id": 10,
+      "name": "Kayak tour 9",
+      "description": "A nice kayak tour through Benagil 9",
+      "time_zone": "Europe/Lisbon",
+      "booking_strategy": "instant",
+      "slug": "10-kayak-tour-9",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/10.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/10.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/10.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": null,
+          "lng": null
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": []
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/10-kayak-tour-9"
+    }
+  }],
+  "links": {
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "current_page_url": "http://www.sb.com:3000/api/v1/activities/search?query=Kayak",
+    "next_page_url": "/api/v1/activities/search?page=2&query=Kayak",
+    "previous_page_url": "/api/v1/activities/search?query=Kayak",
+    "total_pages": 1,
+    "total_count": 10
   }
-]
-```
+}
 
-This endpoint retrieves all kittens.
+```
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://www.seabookings.com/api/v1/activities/search?query=:query`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+query | - | A string describing what type of activity we want to search
+location | - | The location of the activity, specified by city and country, ex: "Lagos Portugal"
+distance | - | A number indicating the maximum distance radius to the location (Requires location to be set)
+distance_unit | km | The unit of the distance (Requires location and distance to be set)
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
 
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
+## Explore
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
+curl "http://www.seabookings.com/api/v1/activities/explore/?tags=accessible,surf&country_code=PT&city_slug='Lagos'"
+  -H "Authorization: Bearer my_own_token"
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/activities/explore/?tags=accessible,surf&country_code=PT&city_slug='Lagos'", false ); // false for synchronous request
+xmlHttp.send( null );
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+	"data": [{
+		"id": "7",
+		"type": "activity",
+		"attributes": {
+			"id": 7,
+			"name": "Kayak tour 6",
+			"description": "A nice kayak tour through Benagil 6",
+			"time_zone": "Europe\/Lisbon",
+			"booking_strategy": "instant",
+			"slug": "7-kayak-tour-6",
+			"availability": {
+				"2018-06-04": [{
+					"slot_id": 7,
+					"start_time": "2000-01-01T09:00:00.000Z",
+					"finish_time": "2000-01-01T12:00:00.000Z",
+					"capacity": 20,
+					"starting_price_cents": 1000,
+					"num_reservations": 0,
+					"unavailable": false,
+					"reason": null,
+					"unavailability_description": null
+				}],
+				"2018-06-05": [{
+					"slot_id": 7,
+					"start_time": "2000-01-01T09:00:00.000Z",
+					"finish_time": "2000-01-01T12:00:00.000Z",
+					"capacity": 20,
+					"starting_price_cents": 1000,
+					"num_reservations": 0,
+					"unavailable": false,
+					"reason": null,
+					"unavailability_description": null
+				}],
+				"2018-06-06": [{
+					"slot_id": 7,
+					"start_time": "2000-01-01T09:00:00.000Z",
+					"finish_time": "2000-01-01T12:00:00.000Z",
+					"capacity": 20,
+					"starting_price_cents": 1000,
+					"num_reservations": 0,
+					"unavailable": false,
+					"reason": null,
+					"unavailability_description": null
+				}],
+				"2018-06-07": [{
+					"slot_id": 7,
+					"start_time": "2000-01-01T09:00:00.000Z",
+					"finish_time": "2000-01-01T12:00:00.000Z",
+					"capacity": 20,
+					"starting_price_cents": 1000,
+					"num_reservations": 0,
+					"unavailable": false,
+					"reason": null,
+					"unavailability_description": null
+				}],
+				"2018-06-08": [{
+					"slot_id": 7,
+					"start_time": "2000-01-01T09:00:00.000Z",
+					"finish_time": "2000-01-01T12:00:00.000Z",
+					"capacity": 20,
+					"starting_price_cents": 1000,
+					"num_reservations": 0,
+					"unavailable": false,
+					"reason": null,
+					"unavailability_description": null
+				}],
+				"2018-06-09": [{
+					"slot_id": 7,
+					"start_time": "2000-01-01T09:00:00.000Z",
+					"finish_time": "2000-01-01T12:00:00.000Z",
+					"capacity": 20,
+					"starting_price_cents": 1000,
+					"num_reservations": 0,
+					"unavailable": false,
+					"reason": null,
+					"unavailability_description": null
+				}],
+				"2018-06-10": [{
+					"slot_id": 7,
+					"start_time": "2000-01-01T09:00:00.000Z",
+					"finish_time": "2000-01-01T12:00:00.000Z",
+					"capacity": 20,
+					"starting_price_cents": 1000,
+					"num_reservations": 0,
+					"unavailable": false,
+					"reason": null,
+					"unavailability_description": null
+				}],
+				"2018-06-11": [{
+					"slot_id": 7,
+					"start_time": "2000-01-01T09:00:00.000Z",
+					"finish_time": "2000-01-01T12:00:00.000Z",
+					"capacity": 20,
+					"starting_price_cents": 1000,
+					"num_reservations": 0,
+					"unavailable": false,
+					"reason": null,
+					"unavailability_description": null
+				}]
+			},
+			"image": {
+				"thumb": "http:\/\/www.sb.com:3000\/uploads\/1\/activities\/pictures\/thumb\/7.jpg",
+				"medium": "http:\/\/www.sb.com:3000\/uploads\/1\/activities\/pictures\/medium\/7.jpg",
+				"original": "http:\/\/www.sb.com:3000\/uploads\/1\/activities\/pictures\/original\/7.jpg"
+			},
+			"category": "experience",
+			"geo": {
+				"country": "Portugal",
+				"city": "Benagil",
+				"coord": {
+					"lat": null,
+					"lng": null
+				}
+			}
+		},
+		"relationships": {
+			"tags": {
+				"data": [
+
+				]
+			}
+		},
+		"links": {
+			"self": "\/api\/v1\/activities\/7-kayak-tour-6"
+		}
+	}],
+	"links": {
+		"current_page": 1,
+		"next_page": 2,
+		"prev_page": null,
+		"current_page_url": "http://www.sb.com:3000/api/v1/activities/explore?per=3",
+		"next_page_url": "/api/v1/activities/explore?page=2&per=3",
+		"previous_page_url": "/api/v1/activities/explore?per=3",
+		"total_pages": 3,
+		"total_count": 9
+	}
 }
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://www.seabookings.com/api/v1/activities/explore/?tags=:tags&country_code=:country_code&city_slug=:city_slug`
 
-### URL Parameters
+### Query Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+Parameter | Default | Description
+--------- | ------- | -----------
+tags | - | A comma separated list of all tags that we wish that the results include
+country_code | - | The country Code we wish to filter (Currently available countries are: PT for Portugal, ES for Spain)
+city_slug | - | The slug associated with the city we wish to filter from
 
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
+## Get a single activity
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
+curl "http://www.seabookings.com/api/v1/activities/1"
+  -H "Authorization: Bearer my_own_token"
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/activities/1" ); // false for synchronous request
+xmlHttp.send( null );
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "deleted" : ":("
+  "data": {
+    "id": "1",
+    "type": "activity",
+    "attributes": {
+      "id": 1,
+      "name": "Kayak tour 0",
+      "description": "<div>A nice kayak tour through Benagil 0</div>",
+      "time_zone": "Lisbon",
+      "booking_strategy": "instant",
+      "slug": "1-kayak-tour-0",
+      "image": {
+        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
+        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
+        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+      },
+      "category": "experience",
+      "geo": {
+        "country": "Portugal",
+        "city": "Benagil",
+        "coord": {
+          "lat": "37.0887105",
+          "lng": "-8.4311101"
+        }
+      }
+    },
+    "relationships": {
+      "tags": {
+        "data": [{
+          "id": "11",
+          "type": "tag"
+        }]
+      }
+    },
+    "links": {
+      "self": "/api/v1/activities/1-kayak-tour-0"
+    }
+  },
+  "included": [{
+    "id": "11",
+    "type": "tag",
+    "attributes": {
+      "id": 11,
+      "key": "accessible",
+      "label": "Accessible"
+    }
+  }]
 }
 ```
 
-This endpoint deletes a specific kitten.
+### HTTP Request
+
+`GET http://www.seabookings.com/api/v1/activities/:id`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+id | - | The activity id
+
+# Tags
+
+## Get all tags
+
+```shell
+curl "http://www.seabookings.com/api/v1/tags"
+  -H "Authorization: Bearer my_own_token"
+```
+
+```javascript
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/tags"); // false for synchronous request
+xmlHttp.send( null );
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "tag",
+            "attributes": {
+                "id": 1,
+                "key": "family",
+                "label": "Family friendly"
+            }
+        },
+        {
+            "id": "2",
+            "type": "tag",
+            "attributes": {
+                "id": 2,
+                "key": "dolphins",
+                "label": "Dolphin watching"
+            }
+        },
+        {
+            "id": "3",
+            "type": "tag",
+            "attributes": {
+                "id": 3,
+                "key": "whales",
+                "label": "Whale watching"
+            }
+        },
+        {
+            "id": "4",
+            "type": "tag",
+            "attributes": {
+                "id": 4,
+                "key": "exciting",
+                "label": "Exciting"
+            }
+        },
+        {
+            "id": "5",
+            "type": "tag",
+            "attributes": {
+                "id": 5,
+                "key": "groups",
+                "label": "Groups friendly"
+            }
+        },
+        {
+            "id": "6",
+            "type": "tag",
+            "attributes": {
+                "id": 6,
+                "key": "jet_ski",
+                "label": "Jet ski"
+            }
+        },
+        {
+            "id": "7",
+            "type": "tag",
+            "attributes": {
+                "id": 7,
+                "key": "sailing",
+                "label": "Sailing tours"
+            }
+        },
+        {
+            "id": "8",
+            "type": "tag",
+            "attributes": {
+                "id": 8,
+                "key": "diving",
+                "label": "Diving"
+            }
+        },
+        {
+            "id": "9",
+            "type": "tag",
+            "attributes": {
+                "id": 9,
+                "key": "fishing",
+                "label": "Fishing"
+            }
+        },
+        {
+            "id": "10",
+            "type": "tag",
+            "attributes": {
+                "id": 10,
+                "key": "pregnant_safe",
+                "label": "Pregnant safe"
+            }
+        },
+        {
+            "id": "11",
+            "type": "tag",
+            "attributes": {
+                "id": 11,
+                "key": "accessible",
+                "label": "Accessible"
+            }
+        },
+        {
+            "id": "12",
+            "type": "tag",
+            "attributes": {
+                "id": 12,
+                "key": "children_safe",
+                "label": "Children safe"
+            }
+        },
+        {
+            "id": "13",
+            "type": "tag",
+            "attributes": {
+                "id": 13,
+                "key": "party_boat",
+                "label": "Party boat"
+            }
+        },
+        {
+            "id": "14",
+            "type": "tag",
+            "attributes": {
+                "id": 14,
+                "key": "romantic",
+                "label": "Romantic tours"
+            }
+        },
+        {
+            "id": "15",
+            "type": "tag",
+            "attributes": {
+                "id": 15,
+                "key": "kayak",
+                "label": "Kayak tours"
+            }
+        },
+        {
+            "id": "16",
+            "type": "tag",
+            "attributes": {
+                "id": 16,
+                "key": "speedboat",
+                "label": "Speed boat tours"
+            }
+        },
+        {
+            "id": "17",
+            "type": "tag",
+            "attributes": {
+                "id": 17,
+                "key": "snorkeling",
+                "label": "Snorkeling"
+            }
+        },
+        {
+            "id": "18",
+            "type": "tag",
+            "attributes": {
+                "id": 18,
+                "key": "sunset",
+                "label": "Sunset tours"
+            }
+        },
+        {
+            "id": "19",
+            "type": "tag",
+            "attributes": {
+                "id": 19,
+                "key": "surf",
+                "label": "Surf"
+            }
+        }
+    ]
+}
+```
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`GET http://www.seabookings.com/api/v1/tags`
 
-### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
+# Countries
+
+## Get all countries and cities
+```shell
+curl "http://www.seabookings.com/api/v1/countries"
+  -H "Authorization: Bearer my_own_token"
+```
+
+```javascript
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/countries", false ); // false for synchronous request
+xmlHttp.send( null );
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "data": [
+    {
+      "id": "PT",
+      "type": "country",
+      "attributes": {
+        "code": "PT",
+        "cities": [
+          {
+            "name": "Benagil",
+            "slug": "benagil"
+          },
+          {
+            "name": "Abrantes",
+            "slug": "abrantes"
+          }
+        ],
+        "name": "Portugal",
+        "details": {
+          "country_data_or_code": "PT",
+          "data": {
+            "continent": "Europe",
+            "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}} {{region_short}}\n{{country}}",
+            "alpha2": "PT",
+            "alpha3": "PRT",
+            "country_code": "351",
+            "international_prefix": "00",
+            "ioc": "POR",
+            "gec": "PO",
+            "name": "Portugal",
+            "national_destination_code_lengths": [
+              2
+            ],
+            "national_number_lengths": [
+              9
+            ],
+            "national_prefix": "None",
+            "number": "620",
+            "region": "Europe",
+            "subregion": "Southern Europe",
+            "world_region": "EMEA",
+            "un_locode": "PT",
+            "nationality": "Portuguese",
+            "eu_member": true,
+            "eea_member": true,
+            "vat_rates": {
+              "standard": 23,
+              "reduced": [
+                6,
+                13
+              ],
+              "super_reduced": null,
+              "parking": 13
+            },
+            "postal_code": true,
+            "unofficial_names": [
+              "Portugal",
+              "ポルトガル"
+            ],
+            "languages_official": [
+              "pt"
+            ],
+            "languages_spoken": [
+              "pt"
+            ],
+            "geo": {
+              "latitude": 39.39987199999999,
+              "latitude_dec": "39.64200973510742",
+              "longitude": -8.224454,
+              "longitude_dec": "-8.009422302246094",
+              "max_latitude": 42.1542048,
+              "max_longitude": -6.1902091,
+              "min_latitude": 32.2895,
+              "min_longitude": -31.4647999,
+              "bounds": {
+                "northeast": {
+                  "lat": 42.1542048,
+                  "lng": -6.1902091
+                },
+                "southwest": {
+                  "lat": 32.2895,
+                  "lng": -31.4647999
+                }
+              }
+            },
+            "currency_code": "EUR",
+            "start_of_week": "monday",
+            "translations": {
+              "en": "Portugal",
+              "pt": "Portugal",
+              "es": "Portugal",
+              "nl": "Portugal",
+              "fr": "Portugal",
+              "de": "Portugal"
+            },
+            "translated_names": [
+              "Portugal",
+              "Portugal",
+              "Portugal",
+              "Portugal",
+              "Portugal",
+              "Portugal"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+### HTTP Request
+`GET http://www.seabookings.com/api/v1/countries`
 
