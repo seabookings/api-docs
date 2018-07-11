@@ -693,6 +693,692 @@ Parameter | Default | Description
 --------- | ------- | -----------
 id | - | The activity id
 
+## Availability
+
+Get the availability of an activity
+
+```shell
+curl "http://www.seabookings.com/api/v1/activities/1/availability"
+  -H "Authorization: Bearer my_own_token"
+```
+
+```javascript
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/activities/availability", false ); // false for synchronous request
+xmlHttp.send( null );
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": {
+        "type": "availability",
+        "attributes": {
+            "2018-07-11": [
+                {
+                    "slot_id": 95,
+                    "start_time": "2000-01-01T09:00:00.000Z",
+                    "finish_time": "2000-01-01T14:00:00.000Z",
+                    "duration": 18000,
+                    "duration_unit": "seconds",
+                    "capacity": 10,
+                    "starting_price_cents": 2000,
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 97,
+                    "start_time": "2000-01-01T10:00:00.000Z",
+                    "finish_time": "2000-01-01T12:00:00.000Z",
+                    "duration": 7200,
+                    "duration_unit": "seconds",
+                    "capacity": 2,
+                    "starting_price_cents": 2000,
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 99,
+                    "start_time": "2000-01-01T13:00:00.000Z",
+                    "finish_time": "2000-01-01T14:00:00.000Z",
+                    "duration": 3600,
+                    "duration_unit": "seconds",
+                    "capacity": 12,
+                    "starting_price_cents": 2000,
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 89,
+                    "start_time": "2000-01-01T15:00:00.000Z",
+                    "finish_time": "2000-01-01T17:00:00.000Z",
+                    "duration": 7200,
+                    "duration_unit": "seconds",
+                    "capacity": 12,
+                    "starting_price_cents": 2000,
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 91,
+                    "start_time": "2000-01-01T17:00:00.000Z",
+                    "finish_time": "2000-01-01T18:00:00.000Z",
+                    "duration": 3600,
+                    "duration_unit": "seconds",
+                    "capacity": 123,
+                    "starting_price_cents": 2000,
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 104,
+                    "start_time": "2000-01-01T18:00:00.000Z",
+                    "finish_time": "2000-01-01T19:00:00.000Z",
+                    "duration": 3600,
+                    "duration_unit": "seconds",
+                    "capacity": 22,
+                    "starting_price_cents": 2000,
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 102,
+                    "start_time": "2000-01-01T19:00:00.000Z",
+                    "finish_time": "2000-01-01T20:00:00.000Z",
+                    "duration": 3600,
+                    "duration_unit": "seconds",
+                    "capacity": 128,
+                    "starting_price_cents": 2000,
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                }
+            ]
+        }
+    }
+}
+```
+### HTTP Request
+
+`GET http://www.seabookings.com/api/v1/activities/:id/availability`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+start_date | today | Lower date limit for availability lookup
+end_date | today | Upper date limit for availability lookup
+
+## Slots
+
+Get all slots of an activity
+
+```shell
+curl "http://www.seabookings.com/api/v1/activities/1/slots"
+  -H "Authorization: Bearer my_own_token"
+```
+
+> You can include the prices in the response by passing the parameter `include=prices`
+
+```shell
+curl "http://www.seabookings.com/api/v1/activities/1/slots?include=prices"
+  -H "Authorization: Bearer my_own_token"
+```
+
+```javascript
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/activities/slots", false ); // false for synchronous request
+xmlHttp.send( null );
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": [
+        {
+            "id": "14",
+            "type": "slot",
+            "attributes": {
+                "id": 14,
+                "start_at": "2018-04-01",
+                "finish_at": "2018-12-31",
+                "start_time": "2000-01-01T09:00:00.000Z",
+                "finish_time": "2000-01-01T12:00:00.000Z",
+                "capacity": 20,
+                "cutoff_minutes": 0,
+                "deleted_at": "2018-04-03T00:00:00.000Z",
+                "created_at": "2018-03-30T15:03:16.356Z",
+                "updated_at": "2018-04-03T11:38:00.819Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "1",
+                            "type": "price"
+                        },
+                        {
+                            "id": "2",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "99",
+            "type": "slot",
+            "attributes": {
+                "id": 99,
+                "start_at": "2018-06-27",
+                "finish_at": "2018-07-31",
+                "start_time": "2000-01-01T13:00:00.000Z",
+                "finish_time": "2000-01-01T14:00:00.000Z",
+                "capacity": 12,
+                "cutoff_minutes": 1440,
+                "deleted_at": null,
+                "created_at": "2018-06-29T08:27:59.482Z",
+                "updated_at": "2018-07-06T13:43:38.322Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "2",
+                            "type": "price"
+                        },
+                        {
+                            "id": "21",
+                            "type": "price"
+                        },
+                        {
+                            "id": "22",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "95",
+            "type": "slot",
+            "attributes": {
+                "id": 95,
+                "start_at": "2018-06-28",
+                "finish_at": "2018-07-31",
+                "start_time": "2000-01-01T09:00:00.000Z",
+                "finish_time": "2000-01-01T14:00:00.000Z",
+                "capacity": 10,
+                "cutoff_minutes": 1440,
+                "deleted_at": null,
+                "created_at": "2018-06-29T08:27:15.060Z",
+                "updated_at": "2018-06-29T08:27:15.065Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "25",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "89",
+            "type": "slot",
+            "attributes": {
+                "id": 89,
+                "start_at": "2018-06-15",
+                "finish_at": "2018-07-31",
+                "start_time": "2000-01-01T15:00:00.000Z",
+                "finish_time": "2000-01-01T17:00:00.000Z",
+                "capacity": 12,
+                "cutoff_minutes": 1440,
+                "deleted_at": null,
+                "created_at": "2018-06-14T11:26:06.123Z",
+                "updated_at": "2018-06-15T15:46:43.678Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "2",
+                            "type": "price"
+                        },
+                        {
+                            "id": "21",
+                            "type": "price"
+                        },
+                        {
+                            "id": "22",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "102",
+            "type": "slot",
+            "attributes": {
+                "id": 102,
+                "start_at": "2018-06-29",
+                "finish_at": "2018-07-31",
+                "start_time": "2000-01-01T19:00:00.000Z",
+                "finish_time": "2000-01-01T20:00:00.000Z",
+                "capacity": 128,
+                "cutoff_minutes": 1440,
+                "deleted_at": null,
+                "created_at": "2018-06-29T08:32:41.992Z",
+                "updated_at": "2018-06-29T08:32:42.013Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "2",
+                            "type": "price"
+                        },
+                        {
+                            "id": "21",
+                            "type": "price"
+                        },
+                        {
+                            "id": "22",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "links": {
+        "current_page": 1,
+        "next_page": 2,
+        "prev_page": null,
+        "current_page_url": "http://www.sb.com:3000/api/v1/activities/1/slots",
+        "next_page_url": "/api/v1/activities/1/slots?page=2",
+        "previous_page_url": null,
+        "total_pages": 2,
+        "total_count": 8
+    }
+}
+```
+
+> With the prices included the returned response is
+
+```json
+{
+    "data": [
+        {
+            "id": "14",
+            "type": "slot",
+            "attributes": {
+                "id": 14,
+                "start_at": "2018-04-01",
+                "finish_at": "2018-12-31",
+                "start_time": "2000-01-01T09:00:00.000Z",
+                "finish_time": "2000-01-01T12:00:00.000Z",
+                "capacity": 20,
+                "cutoff_minutes": 0,
+                "deleted_at": "2018-04-03T00:00:00.000Z",
+                "created_at": "2018-03-30T15:03:16.356Z",
+                "updated_at": "2018-04-03T11:38:00.819Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "1",
+                            "type": "price"
+                        },
+                        {
+                            "id": "2",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "99",
+            "type": "slot",
+            "attributes": {
+                "id": 99,
+                "start_at": "2018-06-27",
+                "finish_at": "2018-07-31",
+                "start_time": "2000-01-01T13:00:00.000Z",
+                "finish_time": "2000-01-01T14:00:00.000Z",
+                "capacity": 12,
+                "cutoff_minutes": 1440,
+                "deleted_at": null,
+                "created_at": "2018-06-29T08:27:59.482Z",
+                "updated_at": "2018-07-06T13:43:38.322Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "2",
+                            "type": "price"
+                        },
+                        {
+                            "id": "21",
+                            "type": "price"
+                        },
+                        {
+                            "id": "22",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "95",
+            "type": "slot",
+            "attributes": {
+                "id": 95,
+                "start_at": "2018-06-28",
+                "finish_at": "2018-07-31",
+                "start_time": "2000-01-01T09:00:00.000Z",
+                "finish_time": "2000-01-01T14:00:00.000Z",
+                "capacity": 10,
+                "cutoff_minutes": 1440,
+                "deleted_at": null,
+                "created_at": "2018-06-29T08:27:15.060Z",
+                "updated_at": "2018-06-29T08:27:15.065Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "25",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "89",
+            "type": "slot",
+            "attributes": {
+                "id": 89,
+                "start_at": "2018-06-15",
+                "finish_at": "2018-07-31",
+                "start_time": "2000-01-01T15:00:00.000Z",
+                "finish_time": "2000-01-01T17:00:00.000Z",
+                "capacity": 12,
+                "cutoff_minutes": 1440,
+                "deleted_at": null,
+                "created_at": "2018-06-14T11:26:06.123Z",
+                "updated_at": "2018-06-15T15:46:43.678Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "2",
+                            "type": "price"
+                        },
+                        {
+                            "id": "21",
+                            "type": "price"
+                        },
+                        {
+                            "id": "22",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "102",
+            "type": "slot",
+            "attributes": {
+                "id": 102,
+                "start_at": "2018-06-29",
+                "finish_at": "2018-07-31",
+                "start_time": "2000-01-01T19:00:00.000Z",
+                "finish_time": "2000-01-01T20:00:00.000Z",
+                "capacity": 128,
+                "cutoff_minutes": 1440,
+                "deleted_at": null,
+                "created_at": "2018-06-29T08:32:41.992Z",
+                "updated_at": "2018-06-29T08:32:42.013Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "2",
+                            "type": "price"
+                        },
+                        {
+                            "id": "21",
+                            "type": "price"
+                        },
+                        {
+                            "id": "22",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "included": [
+        {
+            "id": "1",
+            "type": "price",
+            "attributes": {
+                "id": 1,
+                "value_cents": 1000,
+                "num_individuals": 1,
+                "label": "Adults",
+                "min_age": null,
+                "max_age": null
+            }
+        },
+        {
+            "id": "2",
+            "type": "price",
+            "attributes": {
+                "id": 2,
+                "value_cents": 2000,
+                "num_individuals": 1,
+                "label": "Groups",
+                "min_age": null,
+                "max_age": null
+            }
+        },
+        {
+            "id": "21",
+            "type": "price",
+            "attributes": {
+                "id": 21,
+                "value_cents": 1000,
+                "num_individuals": 4,
+                "label": "Families",
+                "min_age": null,
+                "max_age": null
+            }
+        },
+        {
+            "id": "22",
+            "type": "price",
+            "attributes": {
+                "id": 22,
+                "value_cents": 1000,
+                "num_individuals": 1,
+                "label": "Adults",
+                "min_age": null,
+                "max_age": null
+            }
+        },
+        {
+            "id": "25",
+            "type": "price",
+            "attributes": {
+                "id": 25,
+                "value_cents": 2000,
+                "num_individuals": 1,
+                "label": "Groups",
+                "min_age": null,
+                "max_age": null
+            }
+        }
+    ],
+    "links": {
+        "current_page": 1,
+        "next_page": 2,
+        "prev_page": null,
+        "current_page_url": "http://www.sb.com:3000/api/v1/activities/1/slots?include=prices",
+        "next_page_url": "/api/v1/activities/1/slots?include=prices&page=2",
+        "previous_page_url": null,
+        "total_pages": 2,
+        "total_count": 8
+    }
+} 
+```
+
+### HTTP Request
+
+`GET http://www.seabookings.com/api/v1/activities/:id/slots`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+slot_ids | - | A comma separated list of all slots ids that we wish to retrieve. If this parameter is passed, start_date and end_date parameters are ignored.
+start_date | today | A date to start looking for enabled time slots
+end_date | today | The date until we look for enabled time slots
+include | - | This endpoint allows the sideload of prices. For that pass the parameter `include` with value `prices`
+
+
+## Prices
+
+Get all prices of an activity
+
+```shell
+curl "http://www.seabookings.com/api/v1/activities/1/prices"
+  -H "Authorization: Bearer my_own_token"
+```
+
+```javascript
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/activities/prices", false ); // false for synchronous request
+xmlHttp.send( null );
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": [
+        {
+            "id": "22",
+            "type": "price",
+            "attributes": {
+                "id": 22,
+                "value_cents": 1000,
+                "num_individuals": 1,
+                "label": "Adults",
+                "min_age": null,
+                "max_age": null
+            }
+        },
+        {
+            "id": "1",
+            "type": "price",
+            "attributes": {
+                "id": 1,
+                "value_cents": 1000,
+                "num_individuals": 1,
+                "label": "Adults",
+                "min_age": null,
+                "max_age": null
+            }
+        },
+        {
+            "id": "24",
+            "type": "price",
+            "attributes": {
+                "id": 24,
+                "value_cents": 1000,
+                "num_individuals": 1,
+                "label": "Adults",
+                "min_age": null,
+                "max_age": null
+            }
+        },
+        {
+            "id": "2",
+            "type": "price",
+            "attributes": {
+                "id": 2,
+                "value_cents": 2000,
+                "num_individuals": 1,
+                "label": "Groups",
+                "min_age": null,
+                "max_age": null
+            }
+        },
+        {
+            "id": "21",
+            "type": "price",
+            "attributes": {
+                "id": 21,
+                "value_cents": 1000,
+                "num_individuals": 4,
+                "label": "Families",
+                "min_age": null,
+                "max_age": null
+            }
+        }
+    ],
+    "links": {
+        "current_page": 1,
+        "next_page": 2,
+        "prev_page": null,
+        "current_page_url": "http://www.sb.com:3000/api/v1/activities/1/prices",
+        "next_page_url": "/api/v1/activities/1/prices?page=2",
+        "previous_page_url": null,
+        "total_pages": 2,
+        "total_count": 6
+    }
+}
+```
+
+### HTTP Request
+
+`GET http://www.seabookings.com/api/v1/activities/:id/prices`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+price_ids | - | A comma separated list of all price ids that we wish to retrieve. If nothing is submitted all prices are returned.
+
 # Tags
 
 ## Get all tags
