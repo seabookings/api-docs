@@ -87,350 +87,744 @@ xmlHttp.send( null );
 
 ```json
 {
-  "data": [{
-    "id": "1",
-    "type": "activity",
-    "attributes": {
-      "id": 1,
-      "name": "Kayak tour 0",
-      "description": "<div>A nice kayak tour through Benagil 0</div>",
-      "time_zone": "Lisbon",
-      "booking_strategy": "instant",
-      "slug": "1-kayak-tour-0",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": "37.0887105",
-          "lng": "-8.4311101"
+    "data": [
+        {
+            "id": "1",
+            "type": "activity",
+            "attributes": {
+                "id": 1,
+                "name": "Kayak tour 0",
+                "description": "<div>A nice kayak tour through Benagil 1</div>",
+                "short_description": "Uma descrição breve",
+                "time_zone": "Lisbon",
+                "booking_strategy": "indirect",
+                "slug": "1-kayak-tour-0",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 121,
+                            "start_time": "2000-01-01T17:00:00.000Z",
+                            "finish_time": "2000-01-01T18:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 123,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 104,
+                            "start_time": "2000-01-01T18:00:00.000Z",
+                            "finish_time": "2000-01-01T19:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 22,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 39.4614992,
+                        "lng": -8.1994587
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": [
+                        {
+                            "id": "11",
+                            "type": "tag"
+                        },
+                        {
+                            "id": "13",
+                            "type": "tag"
+                        },
+                        {
+                            "id": "3",
+                            "type": "tag"
+                        },
+                        {
+                            "id": "4",
+                            "type": "tag"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/1-kayak-tour-0"
+            }
+        },
+        {
+            "id": "2",
+            "type": "activity",
+            "attributes": {
+                "id": 2,
+                "name": "Kayak tour 1",
+                "description": "A nice kayak tour through Benagil 1",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "instant",
+                "slug": "2-kayak-tour-1",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 108,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/2.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/2.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/2.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/2-kayak-tour-1"
+            }
+        },
+        {
+            "id": "3",
+            "type": "activity",
+            "attributes": {
+                "id": 3,
+                "name": "Kayak tour 2",
+                "description": "<div>A nice kayak tour through Benagil 2</div>",
+                "short_description": null,
+                "time_zone": "Lisbon",
+                "booking_strategy": "instant",
+                "slug": "3-kayak-tour-2",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 115,
+                            "start_time": "2000-01-01T23:00:00.000Z",
+                            "finish_time": "2000-01-01T23:12:00.000Z",
+                            "duration": 720,
+                            "duration_unit": "seconds",
+                            "capacity": 1,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/3.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/3.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/3.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 39.8085,
+                        "lng": -8.0988
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/3-kayak-tour-2"
+            }
+        },
+        {
+            "id": "4",
+            "type": "activity",
+            "attributes": {
+                "id": 4,
+                "name": "Kayak tour 3",
+                "description": "A nice kayak tour through Benagil 3",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "instant",
+                "slug": "4-kayak-tour-3",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 4,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/4.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/4.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/4.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/4-kayak-tour-3"
+            }
+        },
+        {
+            "id": "5",
+            "type": "activity",
+            "attributes": {
+                "id": 5,
+                "name": "Kayak tour 4",
+                "description": "A nice kayak tour through Benagil 4",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "instant",
+                "slug": "5-kayak-tour-4",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 5,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 1,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/5.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/5.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/5.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/5-kayak-tour-4"
+            }
+        },
+        {
+            "id": "6",
+            "type": "activity",
+            "attributes": {
+                "id": 6,
+                "name": "Kayak tour 5",
+                "description": "A nice kayak tour through Benagil 5",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "instant",
+                "slug": "6-kayak-tour-5",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 6,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/6.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/6.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/6.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/6-kayak-tour-5"
+            }
+        },
+        {
+            "id": "7",
+            "type": "activity",
+            "attributes": {
+                "id": 7,
+                "name": "Kayak tour 6",
+                "description": "A nice kayak tour through Benagil 6",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "instant",
+                "slug": "7-kayak-tour-6",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 7,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/7.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/7.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/7.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/7-kayak-tour-6"
+            }
+        },
+        {
+            "id": "8",
+            "type": "activity",
+            "attributes": {
+                "id": 8,
+                "name": "Kayak tour 7",
+                "description": "A nice kayak tour through Benagil 7",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "instant",
+                "slug": "8-kayak-tour-7",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 8,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/8.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/8.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/8.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/8-kayak-tour-7"
+            }
+        },
+        {
+            "id": "9",
+            "type": "activity",
+            "attributes": {
+                "id": 9,
+                "name": "Kayak tour 8",
+                "description": "A nice kayak tour through Benagil 8",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "instant",
+                "slug": "9-kayak-tour-8",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 9,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/9.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/9.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/9.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/9-kayak-tour-8"
+            }
+        },
+        {
+            "id": "10",
+            "type": "activity",
+            "attributes": {
+                "id": 10,
+                "name": "Kayak tour 9",
+                "description": "A nice kayak tour through Benagil 9",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "instant",
+                "slug": "10-kayak-tour-9",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 10,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/10.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/10.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/10.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/10-kayak-tour-9"
+            }
         }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": [{
-          "id": "11",
-          "type": "tag"
-        }]
-      }
-    },
+    ],
     "links": {
-      "self": "/api/v1/activities/1-kayak-tour-0"
+        "current_page": 1,
+        "next_page": null,
+        "prev_page": null,
+        "current_page_url": "http://www.sb.com:3000/api/v1/activities/search?query=Kayak",
+        "next_page_url": null,
+        "previous_page_url": null,
+        "total_pages": 1,
+        "total_count": 10
     }
-  }, {
-    "id": "2",
-    "type": "activity",
-    "attributes": {
-      "id": 2,
-      "name": "Kayak tour 1",
-      "description": "A nice kayak tour through Benagil 1",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "2-kayak-tour-1",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/2.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/2.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/2.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/2-kayak-tour-1"
-    }
-  }, {
-    "id": "3",
-    "type": "activity",
-    "attributes": {
-      "id": 3,
-      "name": "Kayak tour 2",
-      "description": "A nice kayak tour through Benagil 2",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "3-kayak-tour-2",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/3.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/3.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/3.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/3-kayak-tour-2"
-    }
-  }, {
-    "id": "4",
-    "type": "activity",
-    "attributes": {
-      "id": 4,
-      "name": "Kayak tour 3",
-      "description": "A nice kayak tour through Benagil 3",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "4-kayak-tour-3",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/4.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/4.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/4.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/4-kayak-tour-3"
-    }
-  }, {
-    "id": "5",
-    "type": "activity",
-    "attributes": {
-      "id": 5,
-      "name": "Kayak tour 4",
-      "description": "A nice kayak tour through Benagil 4",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "5-kayak-tour-4",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/5.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/5.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/5.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/5-kayak-tour-4"
-    }
-  }, {
-    "id": "6",
-    "type": "activity",
-    "attributes": {
-      "id": 6,
-      "name": "Kayak tour 5",
-      "description": "A nice kayak tour through Benagil 5",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "6-kayak-tour-5",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/6.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/6.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/6.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/6-kayak-tour-5"
-    }
-  }, {
-    "id": "7",
-    "type": "activity",
-    "attributes": {
-      "id": 7,
-      "name": "Kayak tour 6",
-      "description": "A nice kayak tour through Benagil 6",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "7-kayak-tour-6",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/7.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/7.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/7.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/7-kayak-tour-6"
-    }
-  }, {
-    "id": "8",
-    "type": "activity",
-    "attributes": {
-      "id": 8,
-      "name": "Kayak tour 7",
-      "description": "A nice kayak tour through Benagil 7",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "8-kayak-tour-7",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/8.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/8.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/8.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/8-kayak-tour-7"
-    }
-  }, {
-    "id": "9",
-    "type": "activity",
-    "attributes": {
-      "id": 9,
-      "name": "Kayak tour 8",
-      "description": "A nice kayak tour through Benagil 8",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "9-kayak-tour-8",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/9.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/9.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/9.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/9-kayak-tour-8"
-    }
-  }, {
-    "id": "10",
-    "type": "activity",
-    "attributes": {
-      "id": 10,
-      "name": "Kayak tour 9",
-      "description": "A nice kayak tour through Benagil 9",
-      "time_zone": "Europe/Lisbon",
-      "booking_strategy": "instant",
-      "slug": "10-kayak-tour-9",
-      "image": {
-        "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/10.jpg",
-        "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/10.jpg",
-        "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/10.jpg"
-      },
-      "category": "experience",
-      "geo": {
-        "country": "Portugal",
-        "city": "Benagil",
-        "coord": {
-          "lat": null,
-          "lng": null
-        }
-      }
-    },
-    "relationships": {
-      "tags": {
-        "data": []
-      }
-    },
-    "links": {
-      "self": "/api/v1/activities/10-kayak-tour-9"
-    }
-  }],
-  "links": {
-    "current_page": 1,
-    "next_page": null,
-    "prev_page": null,
-    "current_page_url": "http://www.sb.com:3000/api/v1/activities/search?query=Kayak",
-    "next_page_url": "/api/v1/activities/search?page=2&query=Kayak",
-    "previous_page_url": "/api/v1/activities/search?query=Kayak",
-    "total_pages": 1,
-    "total_count": 10
-  }
 }
 
 ```
@@ -466,142 +860,1266 @@ xmlHttp.send( null );
 
 ```json
 {
-	"data": [{
-		"id": "7",
-		"type": "activity",
-		"attributes": {
-			"id": 7,
-			"name": "Kayak tour 6",
-			"description": "A nice kayak tour through Benagil 6",
-			"time_zone": "Europe\/Lisbon",
-			"booking_strategy": "instant",
-			"slug": "7-kayak-tour-6",
-			"availability": {
-				"2018-06-04": [{
-					"slot_id": 7,
-					"start_time": "2000-01-01T09:00:00.000Z",
-					"finish_time": "2000-01-01T12:00:00.000Z",
-					"capacity": 20,
-					"starting_price_cents": 1000,
-					"num_reservations": 0,
-					"unavailable": false,
-					"reason": null,
-					"unavailability_description": null
-				}],
-				"2018-06-05": [{
-					"slot_id": 7,
-					"start_time": "2000-01-01T09:00:00.000Z",
-					"finish_time": "2000-01-01T12:00:00.000Z",
-					"capacity": 20,
-					"starting_price_cents": 1000,
-					"num_reservations": 0,
-					"unavailable": false,
-					"reason": null,
-					"unavailability_description": null
-				}],
-				"2018-06-06": [{
-					"slot_id": 7,
-					"start_time": "2000-01-01T09:00:00.000Z",
-					"finish_time": "2000-01-01T12:00:00.000Z",
-					"capacity": 20,
-					"starting_price_cents": 1000,
-					"num_reservations": 0,
-					"unavailable": false,
-					"reason": null,
-					"unavailability_description": null
-				}],
-				"2018-06-07": [{
-					"slot_id": 7,
-					"start_time": "2000-01-01T09:00:00.000Z",
-					"finish_time": "2000-01-01T12:00:00.000Z",
-					"capacity": 20,
-					"starting_price_cents": 1000,
-					"num_reservations": 0,
-					"unavailable": false,
-					"reason": null,
-					"unavailability_description": null
-				}],
-				"2018-06-08": [{
-					"slot_id": 7,
-					"start_time": "2000-01-01T09:00:00.000Z",
-					"finish_time": "2000-01-01T12:00:00.000Z",
-					"capacity": 20,
-					"starting_price_cents": 1000,
-					"num_reservations": 0,
-					"unavailable": false,
-					"reason": null,
-					"unavailability_description": null
-				}],
-				"2018-06-09": [{
-					"slot_id": 7,
-					"start_time": "2000-01-01T09:00:00.000Z",
-					"finish_time": "2000-01-01T12:00:00.000Z",
-					"capacity": 20,
-					"starting_price_cents": 1000,
-					"num_reservations": 0,
-					"unavailable": false,
-					"reason": null,
-					"unavailability_description": null
-				}],
-				"2018-06-10": [{
-					"slot_id": 7,
-					"start_time": "2000-01-01T09:00:00.000Z",
-					"finish_time": "2000-01-01T12:00:00.000Z",
-					"capacity": 20,
-					"starting_price_cents": 1000,
-					"num_reservations": 0,
-					"unavailable": false,
-					"reason": null,
-					"unavailability_description": null
-				}],
-				"2018-06-11": [{
-					"slot_id": 7,
-					"start_time": "2000-01-01T09:00:00.000Z",
-					"finish_time": "2000-01-01T12:00:00.000Z",
-					"capacity": 20,
-					"starting_price_cents": 1000,
-					"num_reservations": 0,
-					"unavailable": false,
-					"reason": null,
-					"unavailability_description": null
-				}]
-			},
-			"image": {
-				"thumb": "http:\/\/www.sb.com:3000\/uploads\/1\/activities\/pictures\/thumb\/7.jpg",
-				"medium": "http:\/\/www.sb.com:3000\/uploads\/1\/activities\/pictures\/medium\/7.jpg",
-				"original": "http:\/\/www.sb.com:3000\/uploads\/1\/activities\/pictures\/original\/7.jpg"
-			},
-			"category": "experience",
-			"geo": {
-				"country": "Portugal",
-				"city": "Benagil",
-				"coord": {
-					"lat": null,
-					"lng": null
-				}
-			}
-		},
-		"relationships": {
-			"tags": {
-				"data": [
-
-				]
-			}
-		},
-		"links": {
-			"self": "\/api\/v1\/activities\/7-kayak-tour-6"
-		}
-	}],
-	"links": {
-		"current_page": 1,
-		"next_page": 2,
-		"prev_page": null,
-		"current_page_url": "http://www.sb.com:3000/api/v1/activities/explore?per=3",
-		"next_page_url": "/api/v1/activities/explore?page=2&per=3",
-		"previous_page_url": "/api/v1/activities/explore?per=3",
-		"total_pages": 3,
-		"total_count": 9
-	}
+    "data": [
+        {
+            "id": "13",
+            "type": "activity",
+            "attributes": {
+                "id": 13,
+                "name": "a Barcelona experience",
+                "description": "<div>asdasdasdas<br>asdas<br>das<br>das<br>das<br>das<br>das<br><br></div>",
+                "short_description": "asd",
+                "time_zone": "Lisbon",
+                "booking_strategy": "indirect",
+                "slug": "13-a-barcelona-experience",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 112,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 1,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 2520,
+                                "seconds": 151200
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-24": [
+                        {
+                            "slot_id": 112,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 1,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 2520,
+                                "seconds": 151200
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-25": [
+                        {
+                            "slot_id": 112,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 1,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 2520,
+                                "seconds": 151200
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-26": [
+                        {
+                            "slot_id": 112,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 1,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 2520,
+                                "seconds": 151200
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-27": [],
+                    "2018-07-28": [],
+                    "2018-07-29": [],
+                    "2018-07-30": []
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/2/activities/pictures/thumb/13.jpg?1530630839",
+                    "medium": "http://www.sb.com:3000/uploads/2/activities/pictures/medium/13.jpg?1530630839",
+                    "original": "http://www.sb.com:3000/uploads/2/activities/pictures/original/13.jpg?1530630839"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Lisbon",
+                    "coord": {
+                        "lat": 51.4964,
+                        "lng": -0.1224
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": [
+                        {
+                            "id": "8",
+                            "type": "tag"
+                        },
+                        {
+                            "id": "12",
+                            "type": "tag"
+                        },
+                        {
+                            "id": "11",
+                            "type": "tag"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/13-a-barcelona-experience"
+            }
+        },
+        {
+            "id": "1",
+            "type": "activity",
+            "attributes": {
+                "id": 1,
+                "name": "Kayak tour 0",
+                "description": "<div>A nice kayak tour through Benagil 1</div>",
+                "short_description": "Uma descrição breve",
+                "time_zone": "Lisbon",
+                "booking_strategy": "indirect",
+                "slug": "1-kayak-tour-0",
+                "availability": {
+                    "2018-07-23": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 121,
+                            "start_time": "2000-01-01T17:00:00.000Z",
+                            "finish_time": "2000-01-01T18:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 123,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 104,
+                            "start_time": "2000-01-01T18:00:00.000Z",
+                            "finish_time": "2000-01-01T19:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 22,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-24": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 121,
+                            "start_time": "2000-01-01T17:00:00.000Z",
+                            "finish_time": "2000-01-01T18:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 123,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 104,
+                            "start_time": "2000-01-01T18:00:00.000Z",
+                            "finish_time": "2000-01-01T19:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 22,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-25": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 121,
+                            "start_time": "2000-01-01T17:00:00.000Z",
+                            "finish_time": "2000-01-01T18:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 123,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 104,
+                            "start_time": "2000-01-01T18:00:00.000Z",
+                            "finish_time": "2000-01-01T19:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 22,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-26": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 104,
+                            "start_time": "2000-01-01T18:00:00.000Z",
+                            "finish_time": "2000-01-01T19:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 22,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-27": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 104,
+                            "start_time": "2000-01-01T18:00:00.000Z",
+                            "finish_time": "2000-01-01T19:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 22,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-28": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 104,
+                            "start_time": "2000-01-01T18:00:00.000Z",
+                            "finish_time": "2000-01-01T19:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 22,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-29": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 104,
+                            "start_time": "2000-01-01T18:00:00.000Z",
+                            "finish_time": "2000-01-01T19:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 22,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ],
+                    "2018-07-30": [
+                        {
+                            "slot_id": 120,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 18000,
+                            "duration_unit": "seconds",
+                            "capacity": 10,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 122,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 11,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 97,
+                            "start_time": "2000-01-01T10:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 2,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 119,
+                            "start_time": "2000-01-01T13:00:00.000Z",
+                            "finish_time": "2000-01-01T14:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 89,
+                            "start_time": "2000-01-01T15:00:00.000Z",
+                            "finish_time": "2000-01-01T17:00:00.000Z",
+                            "duration": 7200,
+                            "duration_unit": "seconds",
+                            "capacity": 12,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        },
+                        {
+                            "slot_id": 102,
+                            "start_time": "2000-01-01T19:00:00.000Z",
+                            "finish_time": "2000-01-01T20:00:00.000Z",
+                            "duration": 3600,
+                            "duration_unit": "seconds",
+                            "capacity": 128,
+                            "starting_price_cents": 2000,
+                            "cutoff": {
+                                "minutes": 1440,
+                                "seconds": 86400
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
+                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
+                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 39.4614992,
+                        "lng": -8.1994587
+                    }
+                },
+                "settings": {
+                    "deposit_percentage": 0.2
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": [
+                        {
+                            "id": "11",
+                            "type": "tag"
+                        },
+                        {
+                            "id": "13",
+                            "type": "tag"
+                        },
+                        {
+                            "id": "3",
+                            "type": "tag"
+                        },
+                        {
+                            "id": "4",
+                            "type": "tag"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/1-kayak-tour-0"
+            }
+        }
+    ],
+    "included": [
+        {
+            "id": "8",
+            "type": "tag",
+            "attributes": {
+                "id": 8,
+                "key": "diving",
+                "label": "Diving"
+            }
+        },
+        {
+            "id": "12",
+            "type": "tag",
+            "attributes": {
+                "id": 12,
+                "key": "children_safe",
+                "label": "Children safe"
+            }
+        },
+        {
+            "id": "11",
+            "type": "tag",
+            "attributes": {
+                "id": 11,
+                "key": "accessible",
+                "label": "Accessible"
+            }
+        },
+        {
+            "id": "13",
+            "type": "tag",
+            "attributes": {
+                "id": 13,
+                "key": "party_boat",
+                "label": "Party boat"
+            }
+        },
+        {
+            "id": "3",
+            "type": "tag",
+            "attributes": {
+                "id": 3,
+                "key": "whales",
+                "label": "Whale watching"
+            }
+        },
+        {
+            "id": "4",
+            "type": "tag",
+            "attributes": {
+                "id": 4,
+                "key": "exciting",
+                "label": "Exciting"
+            }
+        }
+    ],
+    "links": {
+        "current_page": 1,
+        "next_page": null,
+        "prev_page": null,
+        "current_page_url": "http://www.sb.com:3000/api/v1/activities/explore?tags=accessible&country_code=PT",
+        "next_page_url": null,
+        "previous_page_url": null,
+        "total_pages": 1,
+        "total_count": 2
+    }
 }
 ```
 
@@ -841,7 +2359,7 @@ curl "http://www.seabookings.com/api/v1/activities/1/slots?include=prices"
 
 ```javascript
 var xmlHttp = new XMLHttpRequest();
-xmlHttp.open( "GET", "/api/v1/activities/slots", false ); // false for synchronous request
+xmlHttp.open( "GET", "/api/v1/activities/1/slots", false ); // false for synchronous request
 xmlHttp.send( null );
 ```
 
