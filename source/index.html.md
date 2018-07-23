@@ -2222,7 +2222,7 @@ curl "http://www.seabookings.com/api/v1/activities/1/availability"
 
 ```javascript
 var xmlHttp = new XMLHttpRequest();
-xmlHttp.open( "GET", "/api/v1/activities/availability", false ); // false for synchronous request
+xmlHttp.open( "GET", "/api/v1/activities/1/availability", false ); // false for synchronous request
 xmlHttp.send( null );
 ```
 
@@ -2233,15 +2233,36 @@ xmlHttp.send( null );
     "data": {
         "type": "availability",
         "attributes": {
-            "2018-07-11": [
+            "2018-07-23": [
                 {
-                    "slot_id": 95,
+                    "slot_id": 120,
                     "start_time": "2000-01-01T09:00:00.000Z",
                     "finish_time": "2000-01-01T14:00:00.000Z",
                     "duration": 18000,
                     "duration_unit": "seconds",
                     "capacity": 10,
                     "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 122,
+                    "start_time": "2000-01-01T09:00:00.000Z",
+                    "finish_time": "2000-01-01T12:00:00.000Z",
+                    "duration": 10800,
+                    "duration_unit": "seconds",
+                    "capacity": 11,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
                     "num_reservations": 0,
                     "unavailable": false,
                     "reason": null,
@@ -2255,19 +2276,27 @@ xmlHttp.send( null );
                     "duration_unit": "seconds",
                     "capacity": 2,
                     "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
                     "num_reservations": 0,
                     "unavailable": false,
                     "reason": null,
                     "unavailability_description": null
                 },
                 {
-                    "slot_id": 99,
+                    "slot_id": 119,
                     "start_time": "2000-01-01T13:00:00.000Z",
                     "finish_time": "2000-01-01T14:00:00.000Z",
                     "duration": 3600,
                     "duration_unit": "seconds",
                     "capacity": 12,
                     "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
                     "num_reservations": 0,
                     "unavailable": false,
                     "reason": null,
@@ -2281,19 +2310,27 @@ xmlHttp.send( null );
                     "duration_unit": "seconds",
                     "capacity": 12,
                     "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
                     "num_reservations": 0,
                     "unavailable": false,
                     "reason": null,
                     "unavailability_description": null
                 },
                 {
-                    "slot_id": 91,
+                    "slot_id": 121,
                     "start_time": "2000-01-01T17:00:00.000Z",
                     "finish_time": "2000-01-01T18:00:00.000Z",
                     "duration": 3600,
                     "duration_unit": "seconds",
                     "capacity": 123,
                     "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
                     "num_reservations": 0,
                     "unavailable": false,
                     "reason": null,
@@ -2307,6 +2344,10 @@ xmlHttp.send( null );
                     "duration_unit": "seconds",
                     "capacity": 22,
                     "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
                     "num_reservations": 0,
                     "unavailable": false,
                     "reason": null,
@@ -2320,6 +2361,10 @@ xmlHttp.send( null );
                     "duration_unit": "seconds",
                     "capacity": 128,
                     "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
                     "num_reservations": 0,
                     "unavailable": false,
                     "reason": null,
