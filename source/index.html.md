@@ -3672,3 +3672,129 @@ Parameter | Default | Description
 price_id  | - | The id of a price
 num_instances | - | The number of times a customer selected that price.
 
+## Retrieve Booking
+
+```shell
+curl -X GET \
+  'http://www.sb.com:3000/api/v1/bookings/retrieve?pnr=DZR5RN&date=2018-07-28' \
+  -H 'Authorization: Bearer dev_token' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: c20a39b2-2b40-4bc0-abd0-0176380263af' \
+  -H 'Referer: www.seabookings.com' \
+```
+
+```javascript
+var data = null;
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("GET", "http://www.sb.com:3000/api/v1/bookings/retrieve?pnr=DZR5RN&date=2018-07-28");
+xhr.setRequestHeader("User-Agent", "SBPORTAL");
+xhr.setRequestHeader("Referer", "www.seabookings.com");
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("Authorization", "Bearer dev_token");
+xhr.setRequestHeader("Cache-Control", "no-cache");
+xhr.setRequestHeader("Postman-Token", "6b4009f4-95cf-45c9-99d0-4d96c5948464");
+
+xhr.send(data);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": {
+        "id": "18674",
+        "type": "booking",
+        "attributes": {
+            "reservation_date": "2018-07-28",
+            "pnr": "DZR5RN",
+            "created_at": "2018-07-27T17:28:25.676Z",
+            "aggregated_total_cents": 1000,
+            "price_total_cents": 1000,
+            "application_fee_cents": 200,
+            "status": "pending",
+            "payment_status": "pending",
+            "via": "web_public",
+            "customer_note": null,
+            "deposit_cents": 1000,
+            "price_fields": [
+                {
+                    "price_id": 42,
+                    "num_instances": 1,
+                    "label": "Adultos"
+                }
+            ]
+        },
+        "relationships": {
+            "slot": {
+                "data": {
+                    "id": "5941",
+                    "type": "slot"
+                }
+            },
+            "customer": {
+                "data": {
+                    "id": "13566",
+                    "type": "customer"
+                }
+            }
+        }
+    },
+    "included": [
+        {
+            "id": "13566",
+            "type": "customer",
+            "attributes": {
+                "name": "Test User",
+                "email": "test@domain.com",
+                "country_code": "351",
+                "phone_number": "967111111"
+            }
+        },
+        {
+            "id": "5941",
+            "type": "slot",
+            "attributes": {
+                "id": 5941,
+                "start_at": "2018-07-28",
+                "finish_at": "2018-07-28",
+                "start_time": "2000-01-01T09:01:00.000Z",
+                "finish_time": "2000-01-01T12:00:00.000Z",
+                "capacity": 12,
+                "cutoff_minutes": 15,
+                "deleted_at": null,
+                "created_at": "2018-07-28T12:28:05.643Z",
+                "updated_at": "2018-07-28T12:28:05.650Z"
+            },
+            "relationships": {
+                "prices": {
+                    "data": [
+                        {
+                            "id": "42",
+                            "type": "price"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+
+### Query Parameters
+
+Both query parameters are mandatory!
+
+Parameter | Default | Description
+--------- | ------- | -----------
+date | - | Date of the booking
+pnr  | - | Booking unique reference number
