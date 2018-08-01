@@ -1,7 +1,493 @@
 # Activities
 
-## Search
+An activity is a tour experience. These set of endpoints allow you to get search/explore and get an experience.
 
+The settings element will dictate much of the behaviour when performing a booking.
+
+## Get a single activity
+
+```shell
+curl "http://www.seabookings.com/api/v1/activities/1"
+  -H "Authorization: Bearer my_own_token"
+```
+
+```javascript
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/activities/1" ); // false for synchronous request
+xmlHttp.send( null );
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": {
+        "id": "1",
+        "type": "activity",
+        "attributes": {
+            "id": 1,
+            "name": "Kayak tour 0",
+            "description": "<div>A nice kayak tour through Benagil 1</div>",
+            "short_description": "Uma descrição breve",
+            "time_zone": "Lisbon",
+            "booking_strategy": "indirect",
+            "slug": "1-kayak-tour-0",
+            "availability": {
+                "2018-07-23": [
+                    {
+                        "slot_id": 120,
+                        "start_time": "2000-01-01T09:00:00.000Z",
+                        "finish_time": "2000-01-01T14:00:00.000Z",
+                        "duration": 18000,
+                        "duration_unit": "seconds",
+                        "capacity": 10,
+                        "starting_price_cents": 2000,
+                        "cutoff": {
+                            "minutes": 1440,
+                            "seconds": 86400
+                        },
+                        "num_reservations": 0,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    },
+                    {
+                        "slot_id": 122,
+                        "start_time": "2000-01-01T09:00:00.000Z",
+                        "finish_time": "2000-01-01T12:00:00.000Z",
+                        "duration": 10800,
+                        "duration_unit": "seconds",
+                        "capacity": 11,
+                        "starting_price_cents": 2000,
+                        "cutoff": {
+                            "minutes": 1440,
+                            "seconds": 86400
+                        },
+                        "num_reservations": 0,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    },
+                    {
+                        "slot_id": 97,
+                        "start_time": "2000-01-01T10:00:00.000Z",
+                        "finish_time": "2000-01-01T12:00:00.000Z",
+                        "duration": 7200,
+                        "duration_unit": "seconds",
+                        "capacity": 2,
+                        "starting_price_cents": 2000,
+                        "cutoff": {
+                            "minutes": 1440,
+                            "seconds": 86400
+                        },
+                        "num_reservations": 0,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    },
+                    {
+                        "slot_id": 119,
+                        "start_time": "2000-01-01T13:00:00.000Z",
+                        "finish_time": "2000-01-01T14:00:00.000Z",
+                        "duration": 3600,
+                        "duration_unit": "seconds",
+                        "capacity": 12,
+                        "starting_price_cents": 2000,
+                        "cutoff": {
+                            "minutes": 1440,
+                            "seconds": 86400
+                        },
+                        "num_reservations": 0,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    },
+                    {
+                        "slot_id": 89,
+                        "start_time": "2000-01-01T15:00:00.000Z",
+                        "finish_time": "2000-01-01T17:00:00.000Z",
+                        "duration": 7200,
+                        "duration_unit": "seconds",
+                        "capacity": 12,
+                        "starting_price_cents": 2000,
+                        "cutoff": {
+                            "minutes": 1440,
+                            "seconds": 86400
+                        },
+                        "num_reservations": 0,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    },
+                    {
+                        "slot_id": 121,
+                        "start_time": "2000-01-01T17:00:00.000Z",
+                        "finish_time": "2000-01-01T18:00:00.000Z",
+                        "duration": 3600,
+                        "duration_unit": "seconds",
+                        "capacity": 123,
+                        "starting_price_cents": 2000,
+                        "cutoff": {
+                            "minutes": 1440,
+                            "seconds": 86400
+                        },
+                        "num_reservations": 0,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    },
+                    {
+                        "slot_id": 104,
+                        "start_time": "2000-01-01T18:00:00.000Z",
+                        "finish_time": "2000-01-01T19:00:00.000Z",
+                        "duration": 3600,
+                        "duration_unit": "seconds",
+                        "capacity": 22,
+                        "starting_price_cents": 2000,
+                        "cutoff": {
+                            "minutes": 1440,
+                            "seconds": 86400
+                        },
+                        "num_reservations": 0,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    },
+                    {
+                        "slot_id": 102,
+                        "start_time": "2000-01-01T19:00:00.000Z",
+                        "finish_time": "2000-01-01T20:00:00.000Z",
+                        "duration": 3600,
+                        "duration_unit": "seconds",
+                        "capacity": 128,
+                        "starting_price_cents": 2000,
+                        "cutoff": {
+                            "minutes": 1440,
+                            "seconds": 86400
+                        },
+                        "num_reservations": 0,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    }
+                ]
+            },
+            "image": {
+                "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
+                "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
+                "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+            },
+            "category": "experience",
+            "geo": {
+                "country": "Portugal",
+                "city": "Benagil",
+                "coord": {
+                    "lat": 39.4614992,
+                    "lng": -8.1994587
+                }
+            },
+            "settings": {
+                "comission_percentage": 0.2,
+                "payment_policy": "full_amount",
+                "booking_strategy": "indirect",
+                "merchant_id": "acct_19S93eBFHEM5ipEo"
+            }
+        },
+        "relationships": {
+            "tags": {
+                "data": [
+                    {
+                        "id": "11",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "13",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "3",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "4",
+                        "type": "tag"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "/api/v1/activities/1-kayak-tour-0"
+        }
+    },
+    "included": [
+        {
+            "id": "11",
+            "type": "tag",
+            "attributes": {
+                "id": 11,
+                "key": "accessible",
+                "label": "Accessible"
+            }
+        },
+        {
+            "id": "13",
+            "type": "tag",
+            "attributes": {
+                "id": 13,
+                "key": "party_boat",
+                "label": "Party boat"
+            }
+        },
+        {
+            "id": "3",
+            "type": "tag",
+            "attributes": {
+                "id": 3,
+                "key": "whales",
+                "label": "Whale watching"
+            }
+        },
+        {
+            "id": "4",
+            "type": "tag",
+            "attributes": {
+                "id": 4,
+                "key": "exciting",
+                "label": "Exciting"
+            }
+        }
+    ]
+}
+```
+
+### HTTP Request
+
+`GET http://www.seabookings.com/api/v1/activities/:id`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+id | - | The activity id
+
+
+### Response properties
+
+Property | Description
+--------- | -----------
+id | A string describing what type of activity we want to search
+name | The name of the activity
+description | Text describing the activity
+short_description | Small text describing the activity
+time zone | Time zone where the activity is located
+slug | A friendly id of the activity
+availability | The availability of the activity
+image | The profile picture of the activity in 3 sizes
+geo | The location of the activity
+settings | The booking policies and properties associated with the activity
+
+### Policies
+The settings block will return a group of properties that dictate how to make a booking and how to perform a payment.
+
+```
+"settings": {
+    "comission_percentage": 0.2,
+    "payment_policy": "full_amount",
+    "booking_strategy": "indirect",
+    "merchant_id": "acct_19S93eBFHEM5ipEo"
+}
+```
+#### Comission Percentage
+The comission percentage will tell how much do we SB charge on this reservation total for this activity.
+The payment policy property will tell if for this activity we should charge the full ammount or just the deposit.
+
+#### Payment policy
+If the payment policy is `full_amount` we charge the total amount for the reservation and we have to specify the application_fee using the StripeConnect payment method. You should create the source in the name of `merchant_id` and use destination fees using SB publishable key.
+
+If the payment policy is `deposit` we charge only the deposit value (`total_cents * comission_percentage`) and we use normal stripe checkout.
+
+#### Booking strategy
+The `boooking_strategy` property tells how the flow of booking is. If the flow is `indirect` it means that after the payment is complete the booking will change its status to `waiting_for_confirmation`. The MTO will have to manually confirm or reject the booking (he was 4 hours to confirm/reject). Only after that we will send the confirmation/cancelation email. During that period a page should be displayed informing the customer that the availability will be confirmed. ToS and Cancelation policy links should also be displayed again.
+
+If the flow is `instant` the confirmation page should be displayed and the booking status must be `booked`.
+
+## Availability
+
+Get the availability of an activity
+
+```shell
+curl "http://www.seabookings.com/api/v1/activities/1/availability"
+  -H "Authorization: Bearer my_own_token"
+```
+
+```javascript
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "/api/v1/activities/1/availability", false ); // false for synchronous request
+xmlHttp.send( null );
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": {
+        "type": "availability",
+        "attributes": {
+            "2018-07-23": [
+                {
+                    "slot_id": 120,
+                    "start_time": "2000-01-01T09:00:00.000Z",
+                    "finish_time": "2000-01-01T14:00:00.000Z",
+                    "duration": 18000,
+                    "duration_unit": "seconds",
+                    "capacity": 10,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 122,
+                    "start_time": "2000-01-01T09:00:00.000Z",
+                    "finish_time": "2000-01-01T12:00:00.000Z",
+                    "duration": 10800,
+                    "duration_unit": "seconds",
+                    "capacity": 11,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 97,
+                    "start_time": "2000-01-01T10:00:00.000Z",
+                    "finish_time": "2000-01-01T12:00:00.000Z",
+                    "duration": 7200,
+                    "duration_unit": "seconds",
+                    "capacity": 2,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 119,
+                    "start_time": "2000-01-01T13:00:00.000Z",
+                    "finish_time": "2000-01-01T14:00:00.000Z",
+                    "duration": 3600,
+                    "duration_unit": "seconds",
+                    "capacity": 12,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 89,
+                    "start_time": "2000-01-01T15:00:00.000Z",
+                    "finish_time": "2000-01-01T17:00:00.000Z",
+                    "duration": 7200,
+                    "duration_unit": "seconds",
+                    "capacity": 12,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 121,
+                    "start_time": "2000-01-01T17:00:00.000Z",
+                    "finish_time": "2000-01-01T18:00:00.000Z",
+                    "duration": 3600,
+                    "duration_unit": "seconds",
+                    "capacity": 123,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 104,
+                    "start_time": "2000-01-01T18:00:00.000Z",
+                    "finish_time": "2000-01-01T19:00:00.000Z",
+                    "duration": 3600,
+                    "duration_unit": "seconds",
+                    "capacity": 22,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                },
+                {
+                    "slot_id": 102,
+                    "start_time": "2000-01-01T19:00:00.000Z",
+                    "finish_time": "2000-01-01T20:00:00.000Z",
+                    "duration": 3600,
+                    "duration_unit": "seconds",
+                    "capacity": 128,
+                    "starting_price_cents": 2000,
+                    "cutoff": {
+                        "minutes": 1440,
+                        "seconds": 86400
+                    },
+                    "num_reservations": 0,
+                    "unavailable": false,
+                    "reason": null,
+                    "unavailability_description": null
+                }
+            ]
+        }
+    }
+}
+```
+### HTTP Request
+
+`GET http://www.seabookings.com/api/v1/activities/:id/availability`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+start_date | today | Lower date limit for availability lookup
+end_date | today | Upper date limit for availability lookup
+
+
+## Search
 ```shell
 curl "http://www.seabookings.com/api/v1/activities/search?query=Kayak"
   -H "Authorization: Bearer my_own_token"
@@ -800,7 +1286,6 @@ query | - | A string describing what type of activity we want to search
 location | - | The location of the activity, specified by city and country, ex: "Lagos Portugal"
 distance | - | A number indicating the maximum distance radius to the location (Requires location to be set)
 distance_unit | km | The unit of the distance (Requires location and distance to be set)
-
 
 ## Explore
 
@@ -2097,447 +2582,6 @@ Parameter | Default | Description
 tags | - | A comma separated list of all tags that we wish that the results include
 country_code | - | The country Code we wish to filter (Currently available countries are: PT for Portugal, ES for Spain)
 city_slug | - | The slug associated with the city we wish to filter from
-
-## Get a single activity
-
-```shell
-curl "http://www.seabookings.com/api/v1/activities/1"
-  -H "Authorization: Bearer my_own_token"
-```
-
-```javascript
-var xmlHttp = new XMLHttpRequest();
-xmlHttp.open( "GET", "/api/v1/activities/1" ); // false for synchronous request
-xmlHttp.send( null );
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-    "data": {
-        "id": "1",
-        "type": "activity",
-        "attributes": {
-            "id": 1,
-            "name": "Kayak tour 0",
-            "description": "<div>A nice kayak tour through Benagil 1</div>",
-            "short_description": "Uma descrição breve",
-            "time_zone": "Lisbon",
-            "booking_strategy": "indirect",
-            "slug": "1-kayak-tour-0",
-            "availability": {
-                "2018-07-23": [
-                    {
-                        "slot_id": 120,
-                        "start_time": "2000-01-01T09:00:00.000Z",
-                        "finish_time": "2000-01-01T14:00:00.000Z",
-                        "duration": 18000,
-                        "duration_unit": "seconds",
-                        "capacity": 10,
-                        "starting_price_cents": 2000,
-                        "cutoff": {
-                            "minutes": 1440,
-                            "seconds": 86400
-                        },
-                        "num_reservations": 0,
-                        "unavailable": false,
-                        "reason": null,
-                        "unavailability_description": null
-                    },
-                    {
-                        "slot_id": 122,
-                        "start_time": "2000-01-01T09:00:00.000Z",
-                        "finish_time": "2000-01-01T12:00:00.000Z",
-                        "duration": 10800,
-                        "duration_unit": "seconds",
-                        "capacity": 11,
-                        "starting_price_cents": 2000,
-                        "cutoff": {
-                            "minutes": 1440,
-                            "seconds": 86400
-                        },
-                        "num_reservations": 0,
-                        "unavailable": false,
-                        "reason": null,
-                        "unavailability_description": null
-                    },
-                    {
-                        "slot_id": 97,
-                        "start_time": "2000-01-01T10:00:00.000Z",
-                        "finish_time": "2000-01-01T12:00:00.000Z",
-                        "duration": 7200,
-                        "duration_unit": "seconds",
-                        "capacity": 2,
-                        "starting_price_cents": 2000,
-                        "cutoff": {
-                            "minutes": 1440,
-                            "seconds": 86400
-                        },
-                        "num_reservations": 0,
-                        "unavailable": false,
-                        "reason": null,
-                        "unavailability_description": null
-                    },
-                    {
-                        "slot_id": 119,
-                        "start_time": "2000-01-01T13:00:00.000Z",
-                        "finish_time": "2000-01-01T14:00:00.000Z",
-                        "duration": 3600,
-                        "duration_unit": "seconds",
-                        "capacity": 12,
-                        "starting_price_cents": 2000,
-                        "cutoff": {
-                            "minutes": 1440,
-                            "seconds": 86400
-                        },
-                        "num_reservations": 0,
-                        "unavailable": false,
-                        "reason": null,
-                        "unavailability_description": null
-                    },
-                    {
-                        "slot_id": 89,
-                        "start_time": "2000-01-01T15:00:00.000Z",
-                        "finish_time": "2000-01-01T17:00:00.000Z",
-                        "duration": 7200,
-                        "duration_unit": "seconds",
-                        "capacity": 12,
-                        "starting_price_cents": 2000,
-                        "cutoff": {
-                            "minutes": 1440,
-                            "seconds": 86400
-                        },
-                        "num_reservations": 0,
-                        "unavailable": false,
-                        "reason": null,
-                        "unavailability_description": null
-                    },
-                    {
-                        "slot_id": 121,
-                        "start_time": "2000-01-01T17:00:00.000Z",
-                        "finish_time": "2000-01-01T18:00:00.000Z",
-                        "duration": 3600,
-                        "duration_unit": "seconds",
-                        "capacity": 123,
-                        "starting_price_cents": 2000,
-                        "cutoff": {
-                            "minutes": 1440,
-                            "seconds": 86400
-                        },
-                        "num_reservations": 0,
-                        "unavailable": false,
-                        "reason": null,
-                        "unavailability_description": null
-                    },
-                    {
-                        "slot_id": 104,
-                        "start_time": "2000-01-01T18:00:00.000Z",
-                        "finish_time": "2000-01-01T19:00:00.000Z",
-                        "duration": 3600,
-                        "duration_unit": "seconds",
-                        "capacity": 22,
-                        "starting_price_cents": 2000,
-                        "cutoff": {
-                            "minutes": 1440,
-                            "seconds": 86400
-                        },
-                        "num_reservations": 0,
-                        "unavailable": false,
-                        "reason": null,
-                        "unavailability_description": null
-                    },
-                    {
-                        "slot_id": 102,
-                        "start_time": "2000-01-01T19:00:00.000Z",
-                        "finish_time": "2000-01-01T20:00:00.000Z",
-                        "duration": 3600,
-                        "duration_unit": "seconds",
-                        "capacity": 128,
-                        "starting_price_cents": 2000,
-                        "cutoff": {
-                            "minutes": 1440,
-                            "seconds": 86400
-                        },
-                        "num_reservations": 0,
-                        "unavailable": false,
-                        "reason": null,
-                        "unavailability_description": null
-                    }
-                ]
-            },
-            "image": {
-                "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
-                "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
-                "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
-            },
-            "category": "experience",
-            "geo": {
-                "country": "Portugal",
-                "city": "Benagil",
-                "coord": {
-                    "lat": 39.4614992,
-                    "lng": -8.1994587
-                }
-            },
-            "settings": {
-                "comission_percentage": 0.2,
-                "payment_policy": "full_amount",
-                "booking_strategy": "indirect",
-                "merchant_id": "acct_19S93eBFHEM5ipEo"
-            }
-        },
-        "relationships": {
-            "tags": {
-                "data": [
-                    {
-                        "id": "11",
-                        "type": "tag"
-                    },
-                    {
-                        "id": "13",
-                        "type": "tag"
-                    },
-                    {
-                        "id": "3",
-                        "type": "tag"
-                    },
-                    {
-                        "id": "4",
-                        "type": "tag"
-                    }
-                ]
-            }
-        },
-        "links": {
-            "self": "/api/v1/activities/1-kayak-tour-0"
-        }
-    },
-    "included": [
-        {
-            "id": "11",
-            "type": "tag",
-            "attributes": {
-                "id": 11,
-                "key": "accessible",
-                "label": "Accessible"
-            }
-        },
-        {
-            "id": "13",
-            "type": "tag",
-            "attributes": {
-                "id": 13,
-                "key": "party_boat",
-                "label": "Party boat"
-            }
-        },
-        {
-            "id": "3",
-            "type": "tag",
-            "attributes": {
-                "id": 3,
-                "key": "whales",
-                "label": "Whale watching"
-            }
-        },
-        {
-            "id": "4",
-            "type": "tag",
-            "attributes": {
-                "id": 4,
-                "key": "exciting",
-                "label": "Exciting"
-            }
-        }
-    ]
-}
-```
-
-### HTTP Request
-
-`GET http://www.seabookings.com/api/v1/activities/:id`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-id | - | The activity id
-
-## Availability
-
-Get the availability of an activity
-
-```shell
-curl "http://www.seabookings.com/api/v1/activities/1/availability"
-  -H "Authorization: Bearer my_own_token"
-```
-
-```javascript
-var xmlHttp = new XMLHttpRequest();
-xmlHttp.open( "GET", "/api/v1/activities/1/availability", false ); // false for synchronous request
-xmlHttp.send( null );
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-    "data": {
-        "type": "availability",
-        "attributes": {
-            "2018-07-23": [
-                {
-                    "slot_id": 120,
-                    "start_time": "2000-01-01T09:00:00.000Z",
-                    "finish_time": "2000-01-01T14:00:00.000Z",
-                    "duration": 18000,
-                    "duration_unit": "seconds",
-                    "capacity": 10,
-                    "starting_price_cents": 2000,
-                    "cutoff": {
-                        "minutes": 1440,
-                        "seconds": 86400
-                    },
-                    "num_reservations": 0,
-                    "unavailable": false,
-                    "reason": null,
-                    "unavailability_description": null
-                },
-                {
-                    "slot_id": 122,
-                    "start_time": "2000-01-01T09:00:00.000Z",
-                    "finish_time": "2000-01-01T12:00:00.000Z",
-                    "duration": 10800,
-                    "duration_unit": "seconds",
-                    "capacity": 11,
-                    "starting_price_cents": 2000,
-                    "cutoff": {
-                        "minutes": 1440,
-                        "seconds": 86400
-                    },
-                    "num_reservations": 0,
-                    "unavailable": false,
-                    "reason": null,
-                    "unavailability_description": null
-                },
-                {
-                    "slot_id": 97,
-                    "start_time": "2000-01-01T10:00:00.000Z",
-                    "finish_time": "2000-01-01T12:00:00.000Z",
-                    "duration": 7200,
-                    "duration_unit": "seconds",
-                    "capacity": 2,
-                    "starting_price_cents": 2000,
-                    "cutoff": {
-                        "minutes": 1440,
-                        "seconds": 86400
-                    },
-                    "num_reservations": 0,
-                    "unavailable": false,
-                    "reason": null,
-                    "unavailability_description": null
-                },
-                {
-                    "slot_id": 119,
-                    "start_time": "2000-01-01T13:00:00.000Z",
-                    "finish_time": "2000-01-01T14:00:00.000Z",
-                    "duration": 3600,
-                    "duration_unit": "seconds",
-                    "capacity": 12,
-                    "starting_price_cents": 2000,
-                    "cutoff": {
-                        "minutes": 1440,
-                        "seconds": 86400
-                    },
-                    "num_reservations": 0,
-                    "unavailable": false,
-                    "reason": null,
-                    "unavailability_description": null
-                },
-                {
-                    "slot_id": 89,
-                    "start_time": "2000-01-01T15:00:00.000Z",
-                    "finish_time": "2000-01-01T17:00:00.000Z",
-                    "duration": 7200,
-                    "duration_unit": "seconds",
-                    "capacity": 12,
-                    "starting_price_cents": 2000,
-                    "cutoff": {
-                        "minutes": 1440,
-                        "seconds": 86400
-                    },
-                    "num_reservations": 0,
-                    "unavailable": false,
-                    "reason": null,
-                    "unavailability_description": null
-                },
-                {
-                    "slot_id": 121,
-                    "start_time": "2000-01-01T17:00:00.000Z",
-                    "finish_time": "2000-01-01T18:00:00.000Z",
-                    "duration": 3600,
-                    "duration_unit": "seconds",
-                    "capacity": 123,
-                    "starting_price_cents": 2000,
-                    "cutoff": {
-                        "minutes": 1440,
-                        "seconds": 86400
-                    },
-                    "num_reservations": 0,
-                    "unavailable": false,
-                    "reason": null,
-                    "unavailability_description": null
-                },
-                {
-                    "slot_id": 104,
-                    "start_time": "2000-01-01T18:00:00.000Z",
-                    "finish_time": "2000-01-01T19:00:00.000Z",
-                    "duration": 3600,
-                    "duration_unit": "seconds",
-                    "capacity": 22,
-                    "starting_price_cents": 2000,
-                    "cutoff": {
-                        "minutes": 1440,
-                        "seconds": 86400
-                    },
-                    "num_reservations": 0,
-                    "unavailable": false,
-                    "reason": null,
-                    "unavailability_description": null
-                },
-                {
-                    "slot_id": 102,
-                    "start_time": "2000-01-01T19:00:00.000Z",
-                    "finish_time": "2000-01-01T20:00:00.000Z",
-                    "duration": 3600,
-                    "duration_unit": "seconds",
-                    "capacity": 128,
-                    "starting_price_cents": 2000,
-                    "cutoff": {
-                        "minutes": 1440,
-                        "seconds": 86400
-                    },
-                    "num_reservations": 0,
-                    "unavailable": false,
-                    "reason": null,
-                    "unavailability_description": null
-                }
-            ]
-        }
-    }
-}
-```
-### HTTP Request
-
-`GET http://www.seabookings.com/api/v1/activities/:id/availability`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-start_date | today | Lower date limit for availability lookup
-end_date | today | Upper date limit for availability lookup
 
 ## Slots
 
