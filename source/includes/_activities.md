@@ -184,7 +184,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -260,7 +263,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -319,7 +325,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -378,7 +387,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -437,7 +449,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -496,7 +511,9 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "deposit",
+                    "booking_strategy": "instant",
                 }
             },
             "relationships": {
@@ -555,7 +572,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -614,7 +634,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -673,7 +696,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -732,7 +758,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -899,7 +928,10 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
                 }
             },
             "relationships": {
@@ -1954,7 +1986,8 @@ xmlHttp.send( null );
                     }
                 },
                 "settings": {
-                    "deposit_percentage": 0.2
+                    "comission_percentage": 0.2,
+                    "payment_policy": "deposit",
                 }
             },
             "relationships": {
@@ -2248,7 +2281,10 @@ xmlHttp.send( null );
                 }
             },
             "settings": {
-                "deposit_percentage": 0.2
+                "comission_percentage": 0.2,
+                "payment_policy": "full_amount",
+                "booking_strategy": "indirect",
+                "merchant_id": "acct_19S93eBFHEM5ipEo"
             }
         },
         "relationships": {
