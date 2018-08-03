@@ -1,0 +1,21 @@
+digraph payments {
+    size="10,5"
+
+    node [shape = point ]; qi
+    node [shape = rectangle];
+    payment_policy [shape="diamond", style=""];
+
+    qi -> "Create Booking";
+    "Create Booking" -> "Make Payment";
+    "Make Payment" -> payment_policy;
+    payment_policy  -> "Connect Flow"  [ label = "full_amount" ];
+    payment_policy  -> "Checkout Flow"  [ label = "deposit" ];
+    "Connect Flow" -> "Charge 100% and take fee (fee = total * comission_percentage)" -> "Stripe";
+    "Checkout Flow" -> "Charge deposit (deposit = total * comission_percentage)"
+    "Charge deposit (deposit = total * comission_percentage)" -> "Stripe"
+    "Charge deposit (deposit = total * comission_percentage)" -> "Paypal"
+
+    "Stripe" -> "Pay with iDeal";
+    "Stripe" -> "Pay CC";
+    "Stripe" -> "Pay CC 3D Secure";
+}

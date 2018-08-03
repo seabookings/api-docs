@@ -1,0 +1,27 @@
+digraph connect_flow {
+    node [shape = point ]; qi
+    node [shape = rectangle];
+    check_card_type [shape="diamond", style=""];
+    booking_status [shape="diamond", style=""];
+
+    qi -> "Stripe Connect";
+    "Stripe Connect" -> "Credit Card";
+    "Stripe Connect" -> "iDeal";
+
+    "Credit Card" -> "Create card token in the name of the connected account";
+    "Create card token in the name of the connected account" -> check_card_type;
+    check_card_type -> "Create source in the name of the connected account" [label = "3d secure"]
+    check_card_type -> "Create Charge using API endpoint" [label = "3d secure unsupported"]
+    "Create Charge using API endpoint" -> booking_status;
+    "iDeal" -> "Create source in the name of the connected account";
+
+    "Create source in the name of the connected account" -> "Redirect to Bank/iDeal with redirect_uri";
+    "Redirect to Bank/iDeal with redirect_uri" -> booking_status
+    "Show processing payment" -> booking_status
+
+    booking_status -> "Show confirmation page"[ label = "status = booked"]
+    booking_status -> "Show page Payment is under verification"[ label = "status = pending"]
+    booking_status -> "Show waiting for availability confirmation page"[ label="status = waiting_for_confirmation"]
+    booking_status -> "Show payment failed page"[ label="payment_status = canceled/failed"]
+    booking_status -> "Show canceled booking"[ label="status = canceled && payment_status != canceled"]
+}

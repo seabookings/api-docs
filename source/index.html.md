@@ -16,6 +16,7 @@ includes:
   - tags
   - countries
   - bookings
+  - payments_flow
   - errors
 
 search: true
