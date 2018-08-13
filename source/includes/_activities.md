@@ -173,9 +173,9 @@ xmlHttp.send( null );
                 ]
             },
             "image": {
-                "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
-                "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
-                "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+                "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/1.jpg",
+                "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/1.jpg",
+                "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/1.jpg"
             },
             "category": "experience",
             "geo": {
@@ -631,9 +631,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/1.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/1.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/1.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -710,9 +710,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/2.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/2.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/2.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/2.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/2.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/2.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -772,9 +772,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/3.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/3.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/3.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/3.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/3.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/3.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -834,9 +834,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/4.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/4.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/4.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/4.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/4.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/4.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -896,9 +896,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/5.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/5.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/5.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/5.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/5.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/5.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -958,9 +958,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/6.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/6.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/6.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/6.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/6.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/6.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -1019,9 +1019,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/7.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/7.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/7.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/7.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/7.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/7.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -1081,9 +1081,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/8.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/8.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/8.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/8.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/8.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/8.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -1143,9 +1143,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/9.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/9.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/9.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/9.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/9.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/9.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -1205,9 +1205,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/10.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/10.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/10.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/10.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/10.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/10.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -1239,7 +1239,7 @@ xmlHttp.send( null );
         "current_page": 1,
         "next_page": null,
         "prev_page": null,
-        "current_page_url": "http://www.sb.com:3000/api/v1/activities/search?query=Kayak",
+        "current_page_url": "http://www.seabookings.com/api/v1/activities/search?query=Kayak",
         "next_page_url": null,
         "previous_page_url": null,
         "total_pages": 1,
@@ -1374,9 +1374,9 @@ xmlHttp.send( null );
                     "2018-07-30": []
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/2/activities/pictures/thumb/13.jpg?1530630839",
-                    "medium": "http://www.sb.com:3000/uploads/2/activities/pictures/medium/13.jpg?1530630839",
-                    "original": "http://www.sb.com:3000/uploads/2/activities/pictures/original/13.jpg?1530630839"
+                    "thumb": "http://www.seabookings.com/uploads/2/activities/pictures/thumb/13.jpg?1530630839",
+                    "medium": "http://www.seabookings.com/uploads/2/activities/pictures/medium/13.jpg?1530630839",
+                    "original": "http://www.seabookings.com/uploads/2/activities/pictures/original/13.jpg?1530630839"
                 },
                 "category": "experience",
                 "geo": {
@@ -2432,9 +2432,9 @@ xmlHttp.send( null );
                     ]
                 },
                 "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/1.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/1.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/1.jpg"
                 },
                 "category": "experience",
                 "geo": {
@@ -2537,7 +2537,7 @@ xmlHttp.send( null );
         "current_page": 1,
         "next_page": null,
         "prev_page": null,
-        "current_page_url": "http://www.sb.com:3000/api/v1/activities/explore?tags=accessible&country_code=PT",
+        "current_page_url": "http://www.seabookings.com/api/v1/activities/explore?tags=accessible&country_code=PT",
         "next_page_url": null,
         "previous_page_url": null,
         "total_pages": 1,
@@ -2557,6 +2557,235 @@ Parameter | Default | Description
 tags | - | A comma separated list of all tags that we wish that the results include
 country_code | - | The country Code we wish to filter (Currently available countries are: PT for Portugal, ES for Spain)
 city_slug | - | The slug associated with the city we wish to filter from
+
+## Featured activities
+
+```shell
+curl -X GET \
+  http://www.seabookings.com/api/v1/activities/featured \
+  -H 'Authorization: Bearer dev_token' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Postman-Token: 2940f50b-8577-4b6d-8f27-bba526965016'
+```
+
+```javascript
+var data = null;
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("GET", "http://www.seabookings.com/api/v1/activities/featured");
+xhr.setRequestHeader("Authorization", "Bearer dev_token");
+xhr.setRequestHeader("Cache-Control", "no-cache");
+xhr.setRequestHeader("Postman-Token", "33b5a314-368e-4fd2-99b8-91ae3f4d6db5");
+
+xhr.send(data);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "activity",
+            "attributes": {
+                "id": 1,
+                "name": "Kayak tour 0",
+                "description": "A nice kayak tour through Benagil 0",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "indirect",
+                "slug": "1-kayak-tour-0",
+                "availability": {
+                    "2018-08-13": [
+                        {
+                            "slot_id": 1,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/1.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/1.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/1.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/1-kayak-tour-0"
+            }
+        },
+        {
+            "id": "2",
+            "type": "activity",
+            "attributes": {
+                "id": 2,
+                "name": "Kayak tour 1",
+                "description": "A nice kayak tour through Benagil 1",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "indirect",
+                "slug": "2-kayak-tour-1",
+                "availability": {
+                    "2018-08-13": [
+                        {
+                            "slot_id": 2,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/2.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/2.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/2.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/2-kayak-tour-1"
+            }
+        },
+        {
+            "id": "3",
+            "type": "activity",
+            "attributes": {
+                "id": 3,
+                "name": "Kayak tour 2",
+                "description": "A nice kayak tour through Benagil 2",
+                "short_description": null,
+                "time_zone": "Europe/Lisbon",
+                "booking_strategy": "indirect",
+                "slug": "3-kayak-tour-2",
+                "availability": {
+                    "2018-08-13": [
+                        {
+                            "slot_id": 3,
+                            "start_time": "2000-01-01T09:00:00.000Z",
+                            "finish_time": "2000-01-01T12:00:00.000Z",
+                            "duration": 10800,
+                            "duration_unit": "seconds",
+                            "capacity": 20,
+                            "starting_price_cents": 1000,
+                            "cutoff": {
+                                "minutes": 0,
+                                "seconds": 0
+                            },
+                            "num_reservations": 0,
+                            "unavailable": false,
+                            "reason": null,
+                            "unavailability_description": null
+                        }
+                    ]
+                },
+                "image": {
+                    "thumb": "http://www.seabookings.com/uploads/1/activities/pictures/thumb/3.jpg",
+                    "medium": "http://www.seabookings.com/uploads/1/activities/pictures/medium/3.jpg",
+                    "original": "http://www.seabookings.com/uploads/1/activities/pictures/original/3.jpg"
+                },
+                "category": "experience",
+                "geo": {
+                    "country": "Portugal",
+                    "city": "Benagil",
+                    "coord": {
+                        "lat": 0,
+                        "lng": 0
+                    }
+                },
+                "settings": {
+                    "comission_percentage": 0.2,
+                    "payment_policy": "full_amount",
+                    "booking_strategy": "indirect",
+                    "merchant_id": "acct_19S93eBFHEM5ipEo"
+                }
+            },
+            "relationships": {
+                "tags": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "/api/v1/activities/3-kayak-tour-2"
+            }
+        }
+    ],
+    "included": []
+}
+```
+
+### HTTP Request
+`GET http://www.seabookings.com/api/v1/activities/featured`
 
 ## Slots
 
@@ -2748,7 +2977,7 @@ xmlHttp.send( null );
         "current_page": 1,
         "next_page": 2,
         "prev_page": null,
-        "current_page_url": "http://www.sb.com:3000/api/v1/activities/1/slots",
+        "current_page_url": "http://www.seabookings.com/api/v1/activities/1/slots",
         "next_page_url": "/api/v1/activities/1/slots?page=2",
         "previous_page_url": null,
         "total_pages": 2,
@@ -2987,7 +3216,7 @@ xmlHttp.send( null );
         "current_page": 1,
         "next_page": 2,
         "prev_page": null,
-        "current_page_url": "http://www.sb.com:3000/api/v1/activities/1/slots?include=prices",
+        "current_page_url": "http://www.seabookings.com/api/v1/activities/1/slots?include=prices",
         "next_page_url": "/api/v1/activities/1/slots?include=prices&page=2",
         "previous_page_url": null,
         "total_pages": 2,
@@ -3095,7 +3324,7 @@ xmlHttp.send( null );
         "current_page": 1,
         "next_page": 2,
         "prev_page": null,
-        "current_page_url": "http://www.sb.com:3000/api/v1/activities/1/prices",
+        "current_page_url": "http://www.seabookings.com/api/v1/activities/1/prices",
         "next_page_url": "/api/v1/activities/1/prices?page=2",
         "previous_page_url": null,
         "total_pages": 2,
