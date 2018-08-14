@@ -72,114 +72,155 @@ xhr.send(data);
 
 ```json
 {
-    "data": {
-        "id": "18674",
-        "type": "booking",
-        "attributes": {
-            "reservation_date": "2018-07-28",
-            "pnr": "DZR5RN",
-            "created_at": "2018-07-27T17:28:25.676Z",
-            "aggregated_total_cents": 1000,
-            "price_total_cents": 1000,
-            "application_fee_cents": 200,
-            "status": "pending",
-            "payment_status": "pending",
-            "via": "web_public",
-            "customer_note": null,
-            "deposit_cents": 1000,
-            "price_fields": [
-                {
-                    "price_id": 42,
-                    "num_instances": 1,
-                    "label": "Adultos"
-                }
-            ]
-        },
-        "relationships": {
-            "slot": {
-                "data": {
-                    "id": "4896",
-                    "type": "slot"
-                }
-            },
-            "customer": {
-                "data": {
-                    "id": "13566",
-                    "type": "customer"
-                }
-            }
+  "data": {
+    "id": "52",
+    "type": "booking",
+    "attributes": {
+      "reservation_date": "2018-08-15",
+      "pnr": "V4FVE3",
+      "created_at": "2018-08-14T09:28:36.079Z",
+      "aggregated_total_cents": 1000,
+      "price_total_cents": 1000,
+      "application_fee_cents": 200,
+      "status": "pending",
+      "payment_status": "pending",
+      "via": "web_public",
+      "customer_note": null,
+      "deposit_cents": 1000,
+      "price_fields": [
+        {
+          "price_id": 17,
+          "price_per_intance_cents": 1000,
+          "num_instances": 1,
+          "label": "Adults"
         }
+      ]
     },
-    "included": [
-        {
-            "id": "13566",
-            "type": "customer",
-            "attributes": {
-                "name": "Test User",
-                "email": "test@domain.com",
-                "country_code": "351",
-                "phone_number": "967111111"
-            }
-        },
-        {
-            "id": "4896",
-            "type": "slot",
-            "attributes": {
-                "id": 4896,
-                "start_at": "2018-07-03",
-                "finish_at": "2018-07-31",
-                "start_time": "2000-01-01T09:00:00.000Z",
-                "finish_time": "2000-01-01T12:00:00.000Z",
-                "capacity": 12,
-                "cutoff_minutes": 15,
-                "deleted_at": null,
-                "created_at": "2018-07-03T13:49:28.005Z",
-                "updated_at": "2018-07-27T17:28:25.728Z"
-            },
-            "relationships": {
-                "prices": {
-                    "data": [
-                        {
-                            "id": "236",
-                            "type": "price"
-                        },
-                        {
-                            "id": "42",
-                            "type": "price"
-                        },
-                        {
-                            "id": "86",
-                            "type": "price"
-                        },
-                        {
-                            "id": "14",
-                            "type": "price"
-                        },
-                        {
-                            "id": "224",
-                            "type": "price"
-                        },
-                        {
-                            "id": "62",
-                            "type": "price"
-                        },
-                        {
-                            "id": "400",
-                            "type": "price"
-                        },
-                        {
-                            "id": "401",
-                            "type": "price"
-                        },
-                        {
-                            "id": "801",
-                            "type": "price"
-                        }
-                    ]
-                }
-            }
+    "relationships": {
+      "activity": {
+        "data": {
+          "id": "9",
+          "type": "activity"
         }
-    ]
+      },
+      "slot": {
+        "data": {
+          "id": "9",
+          "type": "slot"
+        }
+      },
+      "customer": {
+        "data": {
+          "id": "62",
+          "type": "customer"
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9",
+      "type": "activity",
+      "attributes": {
+        "id": 9,
+        "name": "Kayak tour 8",
+        "description": "A nice kayak tour through Benagil 8",
+        "short_description": null,
+        "time_zone": "Europe/Lisbon",
+        "booking_strategy": "indirect",
+        "slug": "9-kayak-tour-8",
+        "availability": {
+          "2018-08-14": [
+            {
+              "slot_id": 9,
+              "start_time": "2000-01-01T09:00:00.000Z",
+              "finish_time": "2000-01-01T12:00:00.000Z",
+              "duration": 10800.0,
+              "duration_unit": "seconds",
+              "capacity": 20,
+              "starting_price_cents": 1000,
+              "cutoff": {
+                "minutes": 0,
+                "seconds": 0
+              },
+              "num_reservations": 0,
+              "unavailable": false,
+              "reason": null,
+              "unavailability_description": null
+            }
+          ]
+        },
+        "image": {
+          "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/9.jpg",
+          "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/9.jpg",
+          "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/9.jpg"
+        },
+        "category": "experience",
+        "geo": {
+          "country": "Portugal",
+          "city": "Benagil",
+          "coord": {
+            "lat": 0.0,
+            "lng": 0.0
+          }
+        },
+        "settings": {
+          "comission_percentage": 0.2,
+          "payment_policy": "full_amount",
+          "booking_strategy": "indirect",
+          "merchant_id": "acct_19S93eBFHEM5ipEo"
+        }
+      },
+      "relationships": {
+        "tags": {
+          "data": []
+        }
+      },
+      "links": {
+        "self": "/api/v1/activities/9-kayak-tour-8"
+      }
+    },
+    {
+      "id": "62",
+      "type": "customer",
+      "attributes": {
+        "name": "John Doe",
+        "email": "fabio@seabookings.com",
+        "country_code": "351",
+        "phone_number": "967126232"
+      }
+    },
+    {
+      "id": "9",
+      "type": "slot",
+      "attributes": {
+        "id": 9,
+        "start_at": "2018-08-10",
+        "finish_at": "2018-12-31",
+        "start_time": "2000-01-01T09:00:00.000Z",
+        "finish_time": "2000-01-01T12:00:00.000Z",
+        "capacity": 20,
+        "cutoff_minutes": 0,
+        "deleted_at": null,
+        "created_at": "2018-08-10T19:01:22.600Z",
+        "updated_at": "2018-08-14T09:28:36.098Z"
+      },
+      "relationships": {
+        "prices": {
+          "data": [
+            {
+              "id": "17",
+              "type": "price"
+            },
+            {
+              "id": "18",
+              "type": "price"
+            }
+          ]
+        }
+      }
+    }
+  ]
 }
 ```
 
@@ -249,82 +290,155 @@ xhr.send(data);
 
 ```json
 {
-    "data": {
-        "id": "18674",
-        "type": "booking",
-        "attributes": {
-            "reservation_date": "2018-07-28",
-            "pnr": "DZR5RN",
-            "created_at": "2018-07-27T17:28:25.676Z",
-            "aggregated_total_cents": 1000,
-            "price_total_cents": 1000,
-            "application_fee_cents": 200,
-            "status": "pending",
-            "payment_status": "pending",
-            "via": "web_public",
-            "customer_note": null,
-            "deposit_cents": 1000,
-            "price_fields": [
-                {
-                    "price_id": 42,
-                    "num_instances": 1,
-                    "label": "Adultos"
-                }
-            ]
-        },
-        "relationships": {
-            "slot": {
-                "data": {
-                    "id": "5941",
-                    "type": "slot"
-                }
-            },
-            "customer": {
-                "data": {
-                    "id": "13566",
-                    "type": "customer"
-                }
-            }
+  "data": {
+    "id": "52",
+    "type": "booking",
+    "attributes": {
+      "reservation_date": "2018-08-15",
+      "pnr": "V4FVE3",
+      "created_at": "2018-08-14T09:28:36.079Z",
+      "aggregated_total_cents": 1000,
+      "price_total_cents": 1000,
+      "application_fee_cents": 200,
+      "status": "pending",
+      "payment_status": "pending",
+      "via": "web_public",
+      "customer_note": null,
+      "deposit_cents": 1000,
+      "price_fields": [
+        {
+          "price_id": 17,
+          "price_per_intance_cents": 1000,
+          "num_instances": 1,
+          "label": "Adults"
         }
+      ]
     },
-    "included": [
-        {
-            "id": "13566",
-            "type": "customer",
-            "attributes": {
-                "name": "Test User",
-                "email": "test@domain.com",
-                "country_code": "351",
-                "phone_number": "967111111"
-            }
-        },
-        {
-            "id": "5941",
-            "type": "slot",
-            "attributes": {
-                "id": 5941,
-                "start_at": "2018-07-28",
-                "finish_at": "2018-07-28",
-                "start_time": "2000-01-01T09:01:00.000Z",
-                "finish_time": "2000-01-01T12:00:00.000Z",
-                "capacity": 12,
-                "cutoff_minutes": 15,
-                "deleted_at": null,
-                "created_at": "2018-07-28T12:28:05.643Z",
-                "updated_at": "2018-07-28T12:28:05.650Z"
-            },
-            "relationships": {
-                "prices": {
-                    "data": [
-                        {
-                            "id": "42",
-                            "type": "price"
-                        }
-                    ]
-                }
-            }
+    "relationships": {
+      "activity": {
+        "data": {
+          "id": "9",
+          "type": "activity"
         }
-    ]
+      },
+      "slot": {
+        "data": {
+          "id": "9",
+          "type": "slot"
+        }
+      },
+      "customer": {
+        "data": {
+          "id": "62",
+          "type": "customer"
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9",
+      "type": "activity",
+      "attributes": {
+        "id": 9,
+        "name": "Kayak tour 8",
+        "description": "A nice kayak tour through Benagil 8",
+        "short_description": null,
+        "time_zone": "Europe/Lisbon",
+        "booking_strategy": "indirect",
+        "slug": "9-kayak-tour-8",
+        "availability": {
+          "2018-08-14": [
+            {
+              "slot_id": 9,
+              "start_time": "2000-01-01T09:00:00.000Z",
+              "finish_time": "2000-01-01T12:00:00.000Z",
+              "duration": 10800.0,
+              "duration_unit": "seconds",
+              "capacity": 20,
+              "starting_price_cents": 1000,
+              "cutoff": {
+                "minutes": 0,
+                "seconds": 0
+              },
+              "num_reservations": 0,
+              "unavailable": false,
+              "reason": null,
+              "unavailability_description": null
+            }
+          ]
+        },
+        "image": {
+          "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/9.jpg",
+          "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/9.jpg",
+          "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/9.jpg"
+        },
+        "category": "experience",
+        "geo": {
+          "country": "Portugal",
+          "city": "Benagil",
+          "coord": {
+            "lat": 0.0,
+            "lng": 0.0
+          }
+        },
+        "settings": {
+          "comission_percentage": 0.2,
+          "payment_policy": "full_amount",
+          "booking_strategy": "indirect",
+          "merchant_id": "acct_19S93eBFHEM5ipEo"
+        }
+      },
+      "relationships": {
+        "tags": {
+          "data": []
+        }
+      },
+      "links": {
+        "self": "/api/v1/activities/9-kayak-tour-8"
+      }
+    },
+    {
+      "id": "62",
+      "type": "customer",
+      "attributes": {
+        "name": "John Doe",
+        "email": "fabio@seabookings.com",
+        "country_code": "351",
+        "phone_number": "967126232"
+      }
+    },
+    {
+      "id": "9",
+      "type": "slot",
+      "attributes": {
+        "id": 9,
+        "start_at": "2018-08-10",
+        "finish_at": "2018-12-31",
+        "start_time": "2000-01-01T09:00:00.000Z",
+        "finish_time": "2000-01-01T12:00:00.000Z",
+        "capacity": 20,
+        "cutoff_minutes": 0,
+        "deleted_at": null,
+        "created_at": "2018-08-10T19:01:22.600Z",
+        "updated_at": "2018-08-14T09:28:36.098Z"
+      },
+      "relationships": {
+        "prices": {
+          "data": [
+            {
+              "id": "17",
+              "type": "price"
+            },
+            {
+              "id": "18",
+              "type": "price"
+            }
+          ]
+        }
+      }
+    }
+  ]
 }
 ```
 
