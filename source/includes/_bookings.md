@@ -2,6 +2,9 @@
 
 ## Create Booking
 
+This endpoint allows you to create a booking. If you wish to build a booking on a multiple stage,
+ you should set the parameter `stage` to `building`.
+
 ```shell
 curl -X POST \
   http://www.sb.com:3000/api/v1/bookings \
@@ -15,6 +18,7 @@ curl -X POST \
 	"activity_id": 1,
 	"slot_id": 4896,
 	"reservation_date": "2018-07-28",
+  "stage": "completed",
 	"customer": {
 	  "name": "Test User",
 	  "email": "test@domain.com",
@@ -230,6 +234,38 @@ xhr.send(data);
 ### Reservation properties
 Parameter | Default | Description
 --------- | ------- | -----------
+activity_id | - | The id of the activity/experience
+slot_id | - | The id of the time slot (time of the booking)
+reservation_date | - | The date of booking
+customer | - | Customer details
+price_fields | - | A list containing the number of people per type of price
+terms_of_service | - | A control value that marks that the person has accepted the terms of service. This value must be collected by an opt in control.
+
+### Customer properties
+Parameter | Default | Description
+--------- | ------- | -----------
+name  | - | The name of the customer
+email | - | The email of the customer
+country_code | - | The country code of the phone number ex: 351
+phone_number | - | The phone number of the  customer
+
+### Price fields properties
+Parameter | Default | Description
+--------- | ------- | -----------
+price_id  | - | The id of a price
+num_instances | - | The number of times a customer selected that price.
+
+## Update Booking
+This allows to update a booking that is in the stage `building`.
+Before proceeding to payments, you will need to perform an update to the stage `completed`.
+
+### HTTP Request
+`PATCH http://www.seabookings.com/api/v1/bookings/:id`
+
+### Reservation properties
+Parameter | Default | Description
+--------- | ------- | -----------
+id          | - | The id of the booking
 activity_id | - | The id of the activity/experience
 slot_id | - | The id of the time slot (time of the booking)
 reservation_date | - | The date of booking
