@@ -118,6 +118,12 @@ xhr.send(data);
           "id": "62",
           "type": "customer"
         }
+      },
+      "shuttle_addon_field": {
+        "data": {
+          "id": "1",
+          "type": "shuttle_addon_field"
+        }
       }
     }
   },
@@ -222,6 +228,21 @@ xhr.send(data);
             }
           ]
         }
+      }
+    },
+    {
+      "id": "1",
+      "type": "shuttle_addon_field",
+      "attributes": {
+        "people": 12,
+        "price_cents": 1000,
+        "oneway": true,
+        "address": "Hotel a",
+        "room": "1",
+        "created_at": "2018-09-25T12:02:22.340Z",
+        "return_trip": true,
+        "paid": false,
+        "time": "09:15"
       }
     }
   ]
@@ -368,6 +389,12 @@ xhr.send(data);
           "id": "62",
           "type": "customer"
         }
+      },
+      "shuttle_addon_field": {
+        "data": {
+          "id": "1",
+          "type": "shuttle_addon_field"
+        }
       }
     }
   },
@@ -473,6 +500,21 @@ xhr.send(data);
           ]
         }
       }
+    },
+    {
+      "id": "1",
+      "type": "shuttle_addon_field",
+      "attributes": {
+        "people": 12,
+        "price_cents": 1000,
+        "oneway": true,
+        "address": "Hotel a",
+        "room": "1",
+        "created_at": "2018-09-25T12:02:22.340Z",
+        "return_trip": true,
+        "paid": false,
+        "time": "09:15"
+      }
     }
   ]
 }
@@ -569,6 +611,12 @@ xhr.send(data);
                     "id": "13569",
                     "type": "customer"
                 }
+            },
+            "shuttle_addon_field": {
+              "data": {
+                "id": "1",
+                "type": "shuttle_addon_field"
+              }
             }
         }
     },
@@ -583,6 +631,21 @@ xhr.send(data);
                 "phone_number": "967111111"
             }
         },
+        {
+          "id": "1",
+          "type": "shuttle_addon_field",
+          "attributes": {
+            "people": 12,
+            "price_cents": 1000,
+            "oneway": true,
+            "address": "Hotel a",
+            "room": "1",
+            "created_at": "2018-09-25T12:02:22.340Z",
+            "return_trip": true,
+            "paid": false,
+            "time": "09:15"
+          }
+        }
         {
             "id": "5942",
             "type": "slot",
