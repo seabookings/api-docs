@@ -204,6 +204,18 @@ xmlHttp.send( null );
             "relationships": {
                 "tags": {
                     "data": []
+                },
+                "highlights": {
+                    "data": [
+                        {
+                            "id": "8",
+                            "type": "highlight"
+                        },
+                        {
+                            "id": "9",
+                            "type": "highlight"
+                        }
+                    ]
                 }
             },
             "links": {
@@ -276,7 +288,22 @@ xmlHttp.send( null );
             }
         }
     ],
-    "included": []
+    "included": [
+        {
+            "id": "8",
+            "type": "highlight",
+            "attributes": {
+                "description": "asd"
+            }
+        },
+        {
+            "id": "9",
+            "type": "highlight",
+            "attributes": {
+                "description": "ss"
+            }
+        }
+    ]
 }
 ```
 
