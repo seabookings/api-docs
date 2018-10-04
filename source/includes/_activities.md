@@ -21,306 +21,105 @@ xmlHttp.send( null );
 
 ```json
 {
-    "data": [
-        {
-            "id": "1",
-            "type": "activity",
-            "attributes": {
-                "id": 1,
-                "name": "Kayak tour 0",
-                "description": "<div>A nice kayak tour through Benagil 0</div>",
-                "short_description": null,
-                "time_zone": "Lisbon",
+    "data": {
+        "id": "1",
+        "type": "activity",
+        "attributes": {
+            "id": 1,
+            "name": "Kayak tour 0",
+            "description": "<div>A nice kayak tour through Benagil 0</div>",
+            "short_description": null,
+            "time_zone": "Lisbon",
+            "booking_strategy": "indirect",
+            "slug": "1-kayak-tour-0",
+            "availability": {
+                "2018-10-04": [
+                    {
+                        "slot_id": 1,
+                        "start_time": "2000-01-01T09:00:00.000Z",
+                        "finish_time": "2000-01-01T12:00:00.000Z",
+                        "duration": 10800,
+                        "duration_unit": "seconds",
+                        "capacity": 20,
+                        "starting_price_cents": 1000,
+                        "cutoff": {
+                            "minutes": 0,
+                            "seconds": 0
+                        },
+                        "num_reservations": 5,
+                        "unavailable": false,
+                        "reason": null,
+                        "unavailability_description": null
+                    }
+                ]
+            },
+            "image": {
+                "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
+                "thumbnail": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
+                "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
+                "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+            },
+            "category": "experience",
+            "geo": {
+                "country": "Portugal",
+                "city": "Benagil",
+                "full_street_address": "Praia de Benagil",
+                "coord": {
+                    "lat": 39.8085,
+                    "lng": -8.0988
+                }
+            },
+            "media": [],
+            "settings": {
+                "comission_percentage": 0.2,
+                "payment_policy": "full_amount",
                 "booking_strategy": "indirect",
-                "slug": "1-kayak-tour-0",
-                "availability": {
-                    "2018-08-27": [
-                        {
-                            "slot_id": 1,
-                            "start_time": "2000-01-01T09:00:00.000Z",
-                            "finish_time": "2000-01-01T12:00:00.000Z",
-                            "duration": 10800,
-                            "duration_unit": "seconds",
-                            "capacity": 20,
-                            "starting_price_cents": 1000,
-                            "cutoff": {
-                                "minutes": 0,
-                                "seconds": 0
-                            },
-                            "num_reservations": 0,
-                            "unavailable": false,
-                            "reason": null,
-                            "unavailability_description": null
-                        }
-                    ]
-                },
-                "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg?1535127515",
-                    "thumbnail": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg?1535127515",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg?1535127515",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg?1535127515"
-                },
-                "category": "experience",
-                "geo": {
-                    "country": "Portugal",
-                    "city": "Benagil",
-                    "full_street_address": "Praia de Benagil",
-                    "coord": {
-                        "lat": 51.5142,
-                        "lng": -0.0931
-                    }
-                },
-                "media": [
-                    {
-                        "description": "barcelona-location",
-                        "images": {
-                            "original": "http://sb.com:3000/photos/original/33-barcelona-location-1535369039.jpg",
-                            "medium": "http://sb.com:3000/photos/original/33-barcelona-location-1535369039.jpg",
-                            "thumbnail": "http://sb.com:3000/photos/original/33-barcelona-location-1535369039.jpg"
-                        }
-                    },
-                    {
-                        "description": "",
-                        "images": {
-                            "original": "http://sb.com:3000/photos/original/35-barcelona-1535384203.jpg",
-                            "medium": "http://sb.com:3000/photos/original/35-barcelona-1535384203.jpg",
-                            "thumbnail": "http://sb.com:3000/photos/original/35-barcelona-1535384203.jpg"
-                        }
-                    },
-                    {
-                        "description": "",
-                        "images": {
-                            "original": "http://sb.com:3000/photos/original/36-aws-logo-1535384269.png",
-                            "medium": "http://sb.com:3000/photos/original/36-aws-logo-1535384269.png",
-                            "thumbnail": "http://sb.com:3000/photos/original/36-aws-logo-1535384269.png"
-                        }
-                    }
-                ],
-                "settings": {
-                    "comission_percentage": 0.2,
-                    "payment_policy": "full_amount",
-                    "booking_strategy": "indirect",
-                    "merchant_id": "acct_19S93eBFHEM5ipEo"
-                }
-            },
-            "relationships": {
-                "tags": {
-                    "data": []
-                }
-            },
-            "links": {
-                "self": "/api/v1/activities/1-kayak-tour-0"
+                "merchant_id": "acct_19S93eBFHEM5ipEo"
             }
         },
-        {
-            "id": "2",
-            "type": "activity",
-            "attributes": {
-                "id": 2,
-                "name": "Kayak tour 1",
-                "description": "<div>A nice kayak tour through Benagil 1</div>",
-                "short_description": null,
-                "time_zone": "Lisbon",
-                "booking_strategy": "indirect",
-                "slug": "2-kayak-tour-1",
-                "availability": {
-                    "2018-08-27": [
-                        {
-                            "slot_id": 2,
-                            "start_time": "2000-01-01T09:00:00.000Z",
-                            "finish_time": "2000-01-01T12:00:00.000Z",
-                            "duration": 10800,
-                            "duration_unit": "seconds",
-                            "capacity": 20,
-                            "starting_price_cents": 1000,
-                            "cutoff": {
-                                "minutes": 0,
-                                "seconds": 0
-                            },
-                            "num_reservations": 0,
-                            "unavailable": false,
-                            "reason": null,
-                            "unavailability_description": null
-                        }
-                    ]
-                },
-                "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/2.jpg",
-                    "thumbnail": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/2.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/2.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/2.jpg"
-                },
-                "category": "experience",
-                "geo": {
-                    "country": "Portugal",
-                    "city": "Benagil",
-                    "full_street_address": "Praia de Benagil",
-                    "coord": {
-                        "lat": 38.7167,
-                        "lng": -9.1333
-                    }
-                },
-                "media": [
-                    {
-                        "description": null,
-                        "images": {
-                            "original": "http://sb.com:3000/photos/original/13-aws-logo-1535111814.png",
-                            "medium": "http://sb.com:3000/photos/original/13-aws-logo-1535111814.png",
-                            "thumbnail": "http://sb.com:3000/photos/original/13-aws-logo-1535111814.png"
-                        }
-                    },
-                    {
-                        "description": null,
-                        "images": {
-                            "original": "http://sb.com:3000/photos/original/14-barcelona-1535111815.jpg",
-                            "medium": "http://sb.com:3000/photos/original/14-barcelona-1535111815.jpg",
-                            "thumbnail": "http://sb.com:3000/photos/original/14-barcelona-1535111815.jpg"
-                        }
-                    },
-                    {
-                        "description": null,
-                        "images": {
-                            "original": "http://sb.com:3000/photos/original/15-boat-tour-1535111816.jpg",
-                            "medium": "http://sb.com:3000/photos/original/15-boat-tour-1535111816.jpg",
-                            "thumbnail": "http://sb.com:3000/photos/original/15-boat-tour-1535111816.jpg"
-                        }
-                    },
-                    {
-                        "description": null,
-                        "images": {
-                            "original": "http://sb.com:3000/photos/original/16-Boat-trips-1535111920.jpg",
-                            "medium": "http://sb.com:3000/photos/original/16-Boat-trips-1535111920.jpg",
-                            "thumbnail": "http://sb.com:3000/photos/original/16-Boat-trips-1535111920.jpg"
-                        }
-                    }
-                ],
-                "settings": {
-                    "comission_percentage": 0.2,
-                    "payment_policy": "full_amount",
-                    "booking_strategy": "indirect",
-                    "merchant_id": "acct_19S93eBFHEM5ipEo"
-                }
+        "relationships": {
+            "tags": {
+                "data": []
             },
-            "relationships": {
-                "tags": {
-                    "data": []
-                },
-                "highlights": {
-                    "data": [
-                        {
-                            "id": "8",
-                            "type": "highlight"
-                        },
-                        {
-                            "id": "9",
-                            "type": "highlight"
-                        }
-                    ]
-                }
+            "highlights": {
+                "data": [
+                    {
+                        "id": "1",
+                        "type": "highlight"
+                    }
+                ]
             },
-            "links": {
-                "self": "/api/v1/activities/2-kayak-tour-1"
+            "includes": {
+                "data": [
+                    {
+                        "id": "1",
+                        "type": "include"
+                    },
+                    {
+                        "id": "2",
+                        "type": "include"
+                    }
+                ]
+            },
+            "reminders": {
+                "data": [
+                    {
+                        "id": "2",
+                        "type": "reminder"
+                    }
+                ]
             }
         },
-        {
-            "id": "3",
-            "type": "activity",
-            "attributes": {
-                "id": 3,
-                "name": "Kayak tour 2",
-                "description": "<div>A nice kayak tour through Benagil 2</div>",
-                "short_description": null,
-                "time_zone": "Lisbon",
-                "booking_strategy": "indirect",
-                "slug": "3-kayak-tour-2",
-                "availability": {
-                    "2018-08-27": [
-                        {
-                            "slot_id": 3,
-                            "start_time": "2000-01-01T09:00:00.000Z",
-                            "finish_time": "2000-01-01T12:00:00.000Z",
-                            "duration": 10800,
-                            "duration_unit": "seconds",
-                            "capacity": 20,
-                            "starting_price_cents": 1000,
-                            "cutoff": {
-                                "minutes": 0,
-                                "seconds": 0
-                            },
-                            "num_reservations": 0,
-                            "unavailable": false,
-                            "reason": null,
-                            "unavailability_description": null
-                        }
-                    ]
-                },
-                "image": {
-                    "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/3.jpg",
-                    "thumbnail": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/3.jpg",
-                    "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/3.jpg",
-                    "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/3.jpg"
-                },
-                "category": "experience",
-                "geo": {
-                    "country": "Portugal",
-                    "city": "Benagil",
-                    "full_street_address": "Praia de Benagil",
-                    "coord": {
-                        "lat": 38.7167,
-                        "lng": -9.1333
-                    }
-                },
-                "media": [],
-                "settings": {
-                    "comission_percentage": 0.2,
-                    "payment_policy": "full_amount",
-                    "booking_strategy": "indirect",
-                    "merchant_id": "acct_19S93eBFHEM5ipEo"
-                }
-            },
-            "relationships": {
-                "tags": {
-                    "data": []
-                },
-                "includes": {
-                    "data": [
-                        {
-                            "id": "1",
-                            "type": "include"
-                        },
-                        {
-                            "id": "2",
-                            "type": "include"
-                        }
-                    ]
-                },
-                "reminders": {
-                    "data": [
-                        {
-                            "id": "2",
-                            "type": "reminder"
-                        }
-                    ]
-                }
-            },
-            "links": {
-                "self": "/api/v1/activities/3-kayak-tour-2"
-            }
+        "links": {
+            "self": "/api/v1/activities/1-kayak-tour-0"
         }
-    ],
+    },
     "included": [
         {
-            "id": "8",
+            "id": "1",
             "type": "highlight",
             "attributes": {
-                "description": "asd"
-            }
-        },
-        {
-            "id": "9",
-            "type": "highlight",
-            "attributes": {
-                "description": "ss"
+                "description": "teste"
             }
         },
         {
