@@ -281,6 +281,26 @@ xmlHttp.send( null );
             "relationships": {
                 "tags": {
                     "data": []
+                },
+                "includes": {
+                    "data": [
+                        {
+                            "id": "1",
+                            "type": "include"
+                        },
+                        {
+                            "id": "2",
+                            "type": "include"
+                        }
+                    ]
+                },
+                "reminders": {
+                    "data": [
+                        {
+                            "id": "2",
+                            "type": "reminder"
+                        }
+                    ]
                 }
             },
             "links": {
@@ -301,6 +321,30 @@ xmlHttp.send( null );
             "type": "highlight",
             "attributes": {
                 "description": "ss"
+            }
+        },
+        {
+            "id": "1",
+            "type": "activity_include",
+            "attributes": {
+                "id": 1,
+                "description": "Snacks"
+            }
+        },
+        {
+            "id": "2",
+            "type": "activity_include",
+            "attributes": {
+                "id": 2,
+                "description": "Bebidas"
+            }
+        },
+        {
+            "id": "2",
+            "type": "reminder",
+            "attributes": {
+                "id": 2,
+                "description": "Arrive 15 minutes before"
             }
         }
     ]
