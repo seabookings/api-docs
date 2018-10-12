@@ -33,7 +33,7 @@ xmlHttp.send( null );
             "booking_strategy": "indirect",
             "slug": "1-kayak-tour-0",
             "availability": {
-                "2018-10-04": [
+                "2018-10-12": [
                     {
                         "slot_id": 1,
                         "start_time": "2000-01-01T09:00:00.000Z",
@@ -46,7 +46,7 @@ xmlHttp.send( null );
                             "minutes": 0,
                             "seconds": 0
                         },
-                        "num_reservations": 5,
+                        "num_reservations": 0,
                         "unavailable": false,
                         "reason": null,
                         "unavailability_description": null
@@ -54,10 +54,10 @@ xmlHttp.send( null );
                 ]
             },
             "image": {
-                "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
-                "thumbnail": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg",
-                "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg",
-                "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg"
+                "thumb": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg?1538670497",
+                "thumbnail": "http://www.sb.com:3000/uploads/1/activities/pictures/thumb/1.jpg?1538670497",
+                "medium": "http://www.sb.com:3000/uploads/1/activities/pictures/medium/1.jpg?1538670497",
+                "original": "http://www.sb.com:3000/uploads/1/activities/pictures/original/1.jpg?1538670497"
             },
             "category": "experience",
             "geo": {
@@ -69,7 +69,24 @@ xmlHttp.send( null );
                     "lng": -8.0988
                 }
             },
-            "media": [],
+            "media": [
+                {
+                    "description": "",
+                    "images": {
+                        "original": "http://sb.com:3000/photos/original/1-boat-tour-1538670502.jpg",
+                        "medium": "http://sb.com:3000/photos/original/1-boat-tour-1538670502.jpg",
+                        "thumbnail": "http://sb.com:3000/photos/original/1-boat-tour-1538670502.jpg"
+                    }
+                },
+                {
+                    "description": "",
+                    "images": {
+                        "original": "http://sb.com:3000/photos/original/2-Boat-trips-1538670502.jpg",
+                        "medium": "http://sb.com:3000/photos/original/2-Boat-trips-1538670502.jpg",
+                        "thumbnail": "http://sb.com:3000/photos/original/2-Boat-trips-1538670502.jpg"
+                    }
+                }
+            ],
             "settings": {
                 "comission_percentage": 0.2,
                 "payment_policy": "full_amount",
@@ -89,20 +106,20 @@ xmlHttp.send( null );
                     }
                 ]
             },
-            "includes": {
+            "perks": {
                 "data": [
                     {
                         "id": "1",
-                        "type": "include"
-                    },
-                    {
-                        "id": "2",
-                        "type": "include"
+                        "type": "perk"
                     }
                 ]
             },
             "reminders": {
                 "data": [
+                    {
+                        "id": "1",
+                        "type": "reminder"
+                    },
                     {
                         "id": "2",
                         "type": "reminder"
@@ -124,18 +141,18 @@ xmlHttp.send( null );
         },
         {
             "id": "1",
-            "type": "activity_include",
+            "type": "perk",
             "attributes": {
                 "id": 1,
                 "description": "Snacks"
             }
         },
         {
-            "id": "2",
-            "type": "activity_include",
+            "id": "1",
+            "type": "reminder",
             "attributes": {
-                "id": 2,
-                "description": "Bebidas"
+                "id": 1,
+                "description": "Bring sunscreen"
             }
         },
         {
