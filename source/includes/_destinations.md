@@ -94,7 +94,12 @@ xmlHttp.send( null );
 
 `GET http://www.seabookings.com/api/v1/destinations`
 
+### Query Parameters
 
+Parameter    | Default | Description
+------------ | ------- | -----------
+featured     | false   | If you just want the featured desinations or all
+country_code | null    | If you want the destinations associated with a specific country. If none are specified destinations for all countries are returned.
 
 
 ## Get destination
