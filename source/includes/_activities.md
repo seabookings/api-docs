@@ -3203,7 +3203,7 @@ Parameter | Default | Description
 --------- | ------- | -----------
 tags | - | A comma separated list of all tags that we wish that the results include
 country_code | - | The country Code we wish to filter (Currently available countries are: PT for Portugal, ES for Spain)
-city_slug | - | The slug associated with the city we wish to filter from
+city_slug | - | A comman separated list with the city associated slugs that we wish to filter from
 
 ## Featured activities
 
