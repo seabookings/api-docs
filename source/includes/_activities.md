@@ -32,6 +32,18 @@ xmlHttp.send( null );
             "time_zone": "Lisbon",
             "booking_strategy": "indirect",
             "slug": "1-kayak-tour-0",
+            "advertising_price": {
+                "id": 597,
+                "value": "12.50",
+                "value_cents": 1250,
+                "value_currency": "EUR"
+            },
+            "advertising_price": {
+              "id": 597,
+              "value": "12.50",
+              "value_cents": 1250,
+              "value_currency": "EUR"
+            },
             "availability": {
                 "2018-10-12": [
                     {
@@ -397,6 +409,18 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "1-kayak-tour-0",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -487,6 +511,18 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "2-kayak-tour-1",
+                "advertising_price": {
+                    "id": 597,
+                    "value": "12.50",
+                    "value_cents": 1250,
+                    "value_currency": "EUR"
+                },
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -585,6 +621,18 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "3-kayak-tour-2",
+                "advertising_price": {
+                    "id": 597,
+                    "value": "12.50",
+                    "value_cents": 1250,
+                    "value_currency": "EUR"
+                },
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -650,6 +698,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "4-kayak-tour-3",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -715,6 +769,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "5-kayak-tour-4",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -780,6 +840,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "6-kayak-tour-5",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -845,6 +911,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "7-kayak-tour-6",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -910,6 +982,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "8-kayak-tour-7",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -975,6 +1053,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "9-kayak-tour-8",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -1040,6 +1124,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "10-kayak-tour-9",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -1151,6 +1241,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "5-kayak-tour-4",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -1349,6 +1445,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "10-kayak-tour-9",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -1547,6 +1649,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "6-kayak-tour-5",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -1745,6 +1853,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "7-kayak-tour-6",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -1943,6 +2057,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "2-kayak-tour-1",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -2174,6 +2294,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "3-kayak-tour-2",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -2372,6 +2498,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "8-kayak-tour-7",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -2570,6 +2702,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "4-kayak-tour-3",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -2768,6 +2906,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "9-kayak-tour-8",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -2966,6 +3110,12 @@ xmlHttp.send( null );
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "1-kayak-tour-0",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -3251,6 +3401,12 @@ xhr.send(data);
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "1-kayak-tour-0",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -3341,6 +3497,12 @@ xhr.send(data);
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "2-kayak-tour-1",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
@@ -3439,6 +3601,12 @@ xhr.send(data);
                 "time_zone": "Lisbon",
                 "booking_strategy": "indirect",
                 "slug": "3-kayak-tour-2",
+                "advertising_price": {
+                  "id": 597,
+                  "value": "12.50",
+                  "value_cents": 1250,
+                  "value_currency": "EUR"
+                },
                 "availability": {
                     "2018-08-27": [
                         {
